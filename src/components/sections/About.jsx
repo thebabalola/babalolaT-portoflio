@@ -28,8 +28,8 @@ const About = () => {
   }, []);
 
   const stats = [
-    { number: "2+", label: "Years Experience", icon: Briefcase },
-    { number: "15+", label: "Projects Completed", icon: Users }
+    { number: "2+", label: "Years in Tech", icon: Briefcase },
+    { number: "10+", label: "Projects Completed", icon: Users }
   ];
 
   return (
@@ -50,13 +50,10 @@ const About = () => {
           >
             <div className="space-y-4">
               <p className="text-base text-light-grey leading-relaxed">
-                I'm a Frontend and Blockchain Developer based in Lagos, Nigeria, with two years + of hands on experience building responsive web and decentralized applications.
+                I’m a self-driven Frontend and Blockchain Developer based in Lagos, Nigeria, with over 2 years of hands-on experience building responsive web and decentralized applications. After transitioning from interior design to tech in 2023, I completed the rigorous ALX Software Engineering program (frontend focus, 2023-2024) and the Web3 Bridge bootcamp (Solidity & DeFi, Jan-May 2025).
               </p>
               <p className="text-base text-light-grey leading-relaxed">
-                My strengths lie in creating clean, maintainable code and integrating smart contracts into modern UIs using tools like React, Next.js, and Solidity. I've built and deployed dApps on Ethereum, Base, and Lisk, focusing on secure, scalable solutions.
-              </p>
-              <p className="text-base text-light-grey leading-relaxed">
-                I'm passionate about learning, building, and solving real-world problems and I'm open to remote opportunities or collaborations.
+                I specialize in crafting clean, maintainable code using React, Next.js, and Tailwind CSS, alongside integrating smart contracts with Solidity, Hardhat, and Wagmi. Passionate about solving real-world problems, such as Lagos’ real estate challenges, I’ve deployed dApps on Ethereum, Base, and Lisk testnets and am open to junior roles, internships, or remote collaborations.
               </p>
             </div>
 
