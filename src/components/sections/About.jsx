@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { Briefcase, Users } from 'lucide-react';
+import { Briefcase, Users, Zap } from 'lucide-react';
 
 const About = () => {
   const sectionRef = useRef(null);
@@ -29,11 +29,12 @@ const About = () => {
 
   const stats = [
     { number: "2+", label: "Years in Tech", icon: Briefcase },
-    { number: "10+", label: "Projects Completed", icon: Users }
+    { number: "10+", label: "Projects Completed", icon: Users },
+    { number: "10+", label: "Open Source Contributions", icon: Zap }
   ];
 
   return (
-    <section id="about" ref={sectionRef} className="py-16 bg-dark-accent/30 animate-on-scroll relative overflow-hidden">
+    <section id="about" ref={sectionRef} className="py-16 animate-on-scroll relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-20 sm:px-24 lg:px-28 relative">
         <div className="mb-12 text-center">
           <p className="text-xl text-light-grey max-w-2xl mx-auto animate-fade-in">
@@ -42,18 +43,21 @@ const About = () => {
           <div className="w-20 h-1 bg-gradient-to-r from-primary-green to-deep-green mx-auto mt-4 rounded-full animate-slide-up"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-4 items-center">
+        <div className="grid lg:grid-cols-12 gap-8 items-center">
           {/* Left Content */}
           <div 
             ref={leftContentRef}
-            className="space-y-6 opacity-0 transform translate-x-[-50px] transition-all duration-1000 ease-out"
+            className="lg:col-span-7 xl:col-span-8 space-y-6 opacity-0 transform translate-x-[-50px] transition-all duration-1000 ease-out"
           >
             <div className="space-y-4">
               <p className="text-base text-light-grey leading-relaxed">
-                I’m a self-driven Frontend and Blockchain Developer based in Lagos, Nigeria, with over 2 years of hands-on experience building responsive web and decentralized applications. After transitioning from interior design to tech in 2023, I completed the rigorous ALX Software Engineering program (frontend focus, 2023-2024) and the Web3 Bridge bootcamp (Solidity & DeFi, Jan-May 2025).
+                I'm a software engineer based in Lagos, Nigeria, with a frontend background and a growing focus on backend systems, Rust, and protocol engineering. I started my tech journey in 2023 after transitioning from interior design and have since built web applications with React, Next.js, TypeScript, and JavaScript while exploring blockchain and distributed systems.
               </p>
               <p className="text-base text-light-grey leading-relaxed">
-                I specialize in crafting clean, maintainable code using React, Next.js, and Tailwind CSS, alongside integrating smart contracts with Solidity, Hardhat, and Wagmi. Passionate about solving real-world problems, such as Lagos’ real estate challenges, I’ve deployed dApps on Ethereum, Base, and Lisk testnets and am open to junior roles, internships, or remote collaborations.
+                Beyond personal projects, I've contributed to open-source projects including the Rust compiler, Servo browser engine, and the Rust Interop Initiative, where I've worked on bug fixes, debugging, Rust/C++ interoperability, and systems-level code. These experiences pushed me beyond building interfaces and sparked my interest in understanding how software works beneath the surface.
+              </p>
+              <p className="text-base text-light-grey leading-relaxed">
+                Today, I'm focused on growing into systems and protocol engineering while continuing to contribute to open source and build software that solves real-world problems.
               </p>
             </div>
 
@@ -83,7 +87,7 @@ const About = () => {
           {/* Right Content - Profile Image */}
           <div 
             ref={rightContentRef}
-            className="flex justify-center lg:justify-end opacity-0 transform translate-x-[50px] transition-all duration-1000 ease-out"
+            className="lg:col-span-5 xl:col-span-4 flex justify-center lg:justify-end opacity-0 transform translate-x-[50px] transition-all duration-1000 ease-out"
           >
             <div className="relative group">
               <img 
