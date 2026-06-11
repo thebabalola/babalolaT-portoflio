@@ -39,7 +39,7 @@ const About = () => {
           <p className="text-xl text-light-grey max-w-2xl mx-auto animate-fade-in">
             Get to know me better
           </p>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary-blue to-deep-blue mx-auto mt-4 rounded-full animate-slide-up"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-primary-green to-deep-green mx-auto mt-4 rounded-full animate-slide-up"></div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-4 items-center">
@@ -62,13 +62,13 @@ const About = () => {
               {stats.map((stat, index) => (
                 <div 
                   key={index}
-                  className="flex items-center space-x-2 p-2 bg-dark-accent/50 rounded-lg border border-primary-blue/10 hover:border-primary-blue/30 hover:bg-dark-accent/70 transition-all duration-300 group"
+                  className="flex items-center space-x-2 p-2 bg-dark-accent/50 rounded-lg border border-primary-green/10 hover:border-primary-green/30 hover:bg-dark-accent/70 transition-all duration-300 group"
                 >
-                  <div className="w-6 h-6 border-2 border-primary-blue rounded-full flex items-center justify-center group-hover:border-deep-blue transition-colors duration-300 flex-shrink-0">
-                    <stat.icon className="w-3 h-3 text-primary-blue group-hover:text-deep-blue transition-colors duration-300" />
+                  <div className="w-6 h-6 border-2 border-primary-green rounded-full flex items-center justify-center group-hover:border-deep-green transition-colors duration-300 flex-shrink-0">
+                    <stat.icon className="w-3 h-3 text-primary-green group-hover:text-deep-green transition-colors duration-300" />
                   </div>
                   <div className="flex-1">
-                    <div className="text-lg font-bold text-primary-blue group-hover:text-deep-blue transition-colors duration-300 flex items-center gap-1">
+                    <div className="text-lg font-bold text-primary-green group-hover:text-deep-green transition-colors duration-300 flex items-center gap-1">
                       <span>{stat.number}</span>
                       <span className="text-light-grey text-xs group-hover:text-white transition-colors duration-300">
                         {stat.label}
@@ -90,7 +90,7 @@ const About = () => {
                 src="/about-me-removebg.png" 
                 alt="Profile" 
                 className="relative w-80 h-80 object-cover shadow-2xl hover:scale-105 transition-all duration-500 animate-breathing"
-                // className="relative w-80 h-80 object-cover rounded-full shadow-2xl hover:scale-105 transition-all duration-500 animate-breathing"
+                style={{ filter: 'hue-rotate(200deg) saturate(1.5)' }}
               />
             </div>
           </div>

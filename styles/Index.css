@@ -14,11 +14,11 @@
 :root {
   --mouse-x: 0px;
   --mouse-y: 0px;
-  --primary-blue: #2B59B0;
-  --primary-blue-rgb: 43, 89, 176;
-  --light-grey: #797979;
-  --dark-accent: #1E1E20;
-  --darkest-bg: #090909;
+  --primary-green: #8DA750;
+  --primary-green-rgb: 141, 167, 80;
+  --light-grey: #E4EB9C;
+  --dark-accent: #2D5128;
+  --darkest-bg: #142C14;
 }
 
 html {
@@ -50,7 +50,7 @@ body {
   background: linear-gradient(
     45deg,
     transparent 30%,
-    rgba(var(--primary-blue-rgb), 0.1) 50%,
+    rgba(var(--primary-green-rgb), 0.1) 50%,
     transparent 70%
   );
   transform: translateX(-100%);
@@ -82,20 +82,20 @@ a, button {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-primary-blue;
+  @apply bg-primary-green;
   border-radius: 10px;
-  background: linear-gradient(180deg, #2B59B0, #1a3a6b);
+  background: linear-gradient(180deg, #8DA750, #2D5128);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #1a3a6b, #2B59B0);
+  background: linear-gradient(180deg, #2D5128, #8DA750);
 }
 
 /* Enhanced Focus States */
 input:focus, select:focus, textarea:focus {
-  box-shadow: 0 0 0 3px rgba(43, 89, 176, 0.3);
+  box-shadow: 0 0 0 3px rgba(141, 167, 80, 0.3);
   outline: none;
-  border-color: var(--primary-blue);
+  border-color: var(--primary-green);
 }
 
 /* Advanced Animation Classes */
@@ -127,7 +127,7 @@ input:focus, select:focus, textarea:focus {
 
 /* Enhanced Gradient Text */
 .gradient-text {
-  background: linear-gradient(135deg, #2B59B0, #797979, #2B59B0);
+  background: linear-gradient(135deg, #8DA750, #E4EB9C, #8DA750);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -148,7 +148,7 @@ input:focus, select:focus, textarea:focus {
 .glass-effect {
   background: rgba(30, 30, 32, 0.15);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(43, 89, 176, 0.3);
+  border: 1px solid rgba(141, 167, 80, 0.3);
   position: relative;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -163,7 +163,7 @@ input:focus, select:focus, textarea:focus {
   bottom: 0;
   background: radial-gradient(
     circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    rgba(43, 89, 176, 0.1) 0%,
+    rgba(141, 167, 80, 0.1) 0%,
     transparent 50%
   );
   opacity: 0;
@@ -182,10 +182,6 @@ input:focus, select:focus, textarea:focus {
 /* Hero Section Enhancements */
 #home {
   position: relative;
-  background: 
-    radial-gradient(circle at 20% 20%, rgba(43, 89, 176, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(14, 14, 162, 0.1) 0%, transparent 50%),
-    linear-gradient(135deg, #090909 0%, #1E1E20 100%);
 }
 
 #home::before {
@@ -196,7 +192,7 @@ input:focus, select:focus, textarea:focus {
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(43, 89, 176, 0.05) 0%, transparent 50%);
+    radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(141, 167, 80, 0.05) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -239,7 +235,7 @@ header nav a::after, header nav button::after {
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #2B59B0, #797979);
+  background: linear-gradient(90deg, #8DA750, #E4EB9C);
   transition: width 0.3s ease;
 }
 
@@ -278,7 +274,7 @@ header nav a:hover::after, header nav button:hover::after {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, #2B59B0, #797979);
+  background: linear-gradient(90deg, #8DA750, #E4EB9C);
   animation: inputFocus 0.3s ease forwards;
 }
 
@@ -316,9 +312,9 @@ header nav a:hover::after, header nav button:hover::after {
   transform: translateY(-50%);
   width: 8px;
   height: 8px;
-  background: linear-gradient(45deg, #2B59B0, #797979);
+  background: linear-gradient(45deg, #8DA750, #E4EB9C);
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(43, 89, 176, 0.5);
+  box-shadow: 0 0 10px rgba(141, 167, 80, 0.5);
   animation: pulse 2s infinite;
 }
 
@@ -335,13 +331,13 @@ header nav a:hover::after, header nav button:hover::after {
 
 #skills li:hover {
   transform: translateX(8px);
-  color: #2B59B0;
+  color: #8DA750;
 }
 
 /* Typewriter Effect */
 .typewriter {
   overflow: hidden;
-  border-right: 3px solid #2B59B0;
+  border-right: 3px solid #8DA750;
   white-space: nowrap;
   animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
 }
@@ -353,7 +349,7 @@ header nav a:hover::after, header nav button:hover::after {
 
 @keyframes blink-caret {
   from, to { border-color: transparent; }
-  50% { border-color: #2B59B0; }
+  50% { border-color: #8DA750; }
 }
 
 /* Enhanced Shadow Effects */
@@ -362,15 +358,15 @@ header nav a:hover::after, header nav button:hover::after {
 }
 
 .shadow-card-hover {
-  box-shadow: 0 20px 40px rgba(43, 89, 176, 0.2);
+  box-shadow: 0 20px 40px rgba(141, 167, 80, 0.2);
 }
 
 .shadow-glow {
-  box-shadow: 0 0 20px rgba(43, 89, 176, 0.3);
+  box-shadow: 0 0 20px rgba(141, 167, 80, 0.3);
 }
 
 .shadow-glow-lg {
-  box-shadow: 0 0 40px rgba(43, 89, 176, 0.4);
+  box-shadow: 0 0 40px rgba(141, 167, 80, 0.4);
 }
 
 /* Bouncing Arrow Animation */

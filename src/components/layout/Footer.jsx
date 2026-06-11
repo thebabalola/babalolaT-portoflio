@@ -48,7 +48,7 @@ const Footer = () => {
                 <div key={link.name} className="flex items-center">
                   <button
                     onClick={(e) => handleSmoothScroll(e, link.href)}
-                    className="text-light-grey hover:text-primary-blue"
+                    className="text-light-grey hover:text-primary-green"
                   >
                     {link.name}
                   </button>
@@ -66,7 +66,7 @@ const Footer = () => {
                 href="https://github.com/thebabalola"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-light-grey hover:text-primary-blue transition-all hover:scale-110"
+                className="text-light-grey hover:text-primary-green transition-all hover:scale-110"
                 title="GitHub"
               >
                 <Github className="w-6 h-6" />
@@ -75,14 +75,14 @@ const Footer = () => {
                 href="https://linkedin.com/in/babalola-taiwo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-light-grey hover:text-primary-blue transition-all hover:scale-110"
+                className="text-light-grey hover:text-primary-green transition-all hover:scale-110"
                 title="LinkedIn"
               >
                 <Linkedin className="w-6 h-6" />
               </a>
               <a
                 href="mailto:t.babalolajoseph@gmail.com"
-                className="text-light-grey hover:text-primary-blue transition-all hover:scale-110"
+                className="text-light-grey hover:text-primary-green transition-all hover:scale-110"
                 title="Email"
               >
                 <Mail className="w-6 h-6" />
@@ -96,7 +96,7 @@ const Footer = () => {
             id="back-to-top"
             ref={backToTopRef}
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="mt-4 text-primary-blue hover:text-primary-blue/80"
+            className="mt-4 text-primary-green hover:text-primary-green/80"
             style={{ opacity: 0, transform: 'translateY(20px)', transition: 'all 0.3s' }}
           >
             Back to Top ↑

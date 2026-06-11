@@ -51,7 +51,7 @@ const Hero = () => {
       draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(43, 89, 176, ${this.opacity})`;
+        ctx.fillStyle = `rgba(141, 167, 80, ${this.opacity})`;
         ctx.fill();
       }
     }
@@ -73,7 +73,7 @@ const Hero = () => {
             Math.pow(particle.y - otherParticle.y, 2)
           );
           if (distance < 100) {
-            ctx.strokeStyle = `rgba(43, 89, 176, ${0.2 * (1 - distance / 100)})`;
+            ctx.strokeStyle = `rgba(141, 167, 80, ${0.2 * (1 - distance / 100)})`;
             ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
@@ -148,20 +148,20 @@ const Hero = () => {
     <section
       id="home"
       ref={sectionRef}
-      className="h-screen flex items-center justify-center relative overflow-hidden animate-on-scroll"
+      className="h-screen flex items-center justify-center relative overflow-hidden animate-on-scroll bg-darkest-bg"
     >
       <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none" />
-      {/* Background blur overlay - THIS IS WHERE THE BLUR HAPPENS */}
-      <div className="absolute inset-0 bg-gradient-to-br from-darkest-bg via-dark-accent to-deep-blue opacity-50 backdrop-blur-sm"></div>
+      {/* Background blur overlay - removed gradient to match skills section */}
+      <div className="absolute inset-0 backdrop-blur-sm"></div>
       
       {/* Background Tech Icons */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 text-primary-blue/10 text-6xl animate-pulse font-mono">{'<>'}</div>
-        <div className="absolute top-40 right-20 text-primary-blue/10 text-4xl animate-bounce-slow font-mono">{'{ }'}</div>
-        <div className="absolute bottom-40 left-20 text-primary-blue/10 text-5xl animate-pulse font-mono">{'</>'}</div>
-        <div className="absolute bottom-20 right-10 text-primary-blue/10 text-6xl animate-bounce-slow font-mono">{'()'}</div>
-        <div className="absolute top-1/2 left-1/4 text-primary-blue/5 text-8xl animate-pulse font-mono">{'#'}</div>
-        <div className="absolute top-1/3 right-1/4 text-primary-blue/5 text-7xl animate-bounce-slow font-mono">{'[]'}</div>
+        <div className="absolute top-20 left-10 text-primary-green/10 text-6xl animate-pulse font-mono">{'<>'}</div>
+        <div className="absolute top-40 right-20 text-primary-green/10 text-4xl animate-bounce-slow font-mono">{'{ }'}</div>
+        <div className="absolute bottom-40 left-20 text-primary-green/10 text-5xl animate-pulse font-mono">{'</>'}</div>
+        <div className="absolute bottom-20 right-10 text-primary-green/10 text-6xl animate-bounce-slow font-mono">{'()'}</div>
+        <div className="absolute top-1/2 left-1/4 text-primary-green/5 text-8xl animate-pulse font-mono">{'#'}</div>
+        <div className="absolute top-1/3 right-1/4 text-primary-green/5 text-7xl animate-bounce-slow font-mono">{'[]'}</div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -177,7 +177,7 @@ const Hero = () => {
                   ref={nameRef}
                   className="block gradient-text will-change-transform"
                   style={{ 
-                    background: 'linear-gradient(135deg, #2B59B0 0%, #0E0EA2 100%)',
+                    background: 'linear-gradient(135deg, #8DA750 0%, #537B2F 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text'
@@ -194,13 +194,13 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center animate-fade-in animation-delay-700">
               <button
                 onClick={(e) => handleSmoothScroll(e, '#projects')}
-                className="bg-primary-blue text-darkest-bg font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-glow active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary-blue focus:ring-offset-2 focus:ring-offset-darkest-bg"
+                className="bg-primary-green text-darkest-bg font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-glow active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-darkest-bg"
               >
                 View My Work
               </button>
               <button
                 onClick={(e) => handleSmoothScroll(e, '#contact')}
-                className="border-2 border-primary-blue text-primary-blue font-semibold px-6 py-3 rounded-lg hover:bg-primary-blue hover:text-darkest-bg transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary-blue focus:ring-offset-2 focus:ring-offset-darkest-bg"
+                className="border-2 border-primary-green text-primary-green font-semibold px-6 py-3 rounded-lg hover:bg-primary-green hover:text-darkest-bg transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-darkest-bg"
               >
                 Get In Touch
               </button>
@@ -216,13 +216,13 @@ const Hero = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`group relative p-3 rounded-lg border-2 border-light-grey/30 text-light-grey transition-all duration-300 hover:scale-110 hover:border-primary-blue ${social.hoverColor} focus:outline-none focus:ring-2 focus:ring-primary-blue focus:ring-offset-2 focus:ring-offset-darkest-bg`}
+                    className={`group relative p-3 rounded-lg border-2 border-light-grey/30 text-light-grey transition-all duration-300 hover:scale-110 hover:border-primary-green ${social.hoverColor} focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-darkest-bg`}
                     title={social.label}
                   >
                     <IconComponent size={20} className="transition-colors duration-300 relative z-10" />
                     
                     {/* Hover glow effect */}
-                    <div className="absolute inset-0 rounded-lg bg-primary-blue/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+                    <div className="absolute inset-0 rounded-lg bg-primary-green/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
                   </a>
                 );
               })}
@@ -233,7 +233,7 @@ const Hero = () => {
           <div className="flex-shrink-0 lg:order-2 animate-fade-in animation-delay-400">
             <div className="relative group">
               {/* Profile Picture Container - Circular */}
-              <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary-blue/30 shadow-glow transition-all duration-500 hover:border-primary-blue hover:shadow-glow-lg hover:scale-105">
+              <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary-green/30 shadow-glow transition-all duration-500 hover:border-primary-green hover:shadow-glow-lg hover:scale-105">
                 {/* Replace 'your-image.jpg' with your actual image path */}
                 <img 
                   src="/profile-picture3.png" 
@@ -241,12 +241,12 @@ const Hero = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 {/* Overlay gradient for depth */}
-                <div className="absolute inset-0 bg-gradient-to-t from-primary-blue/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-green/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               
               {/* Decorative elements around the image */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary-blue/20 rounded-full animate-bounce-slow"></div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-primary-blue/30 rounded-full animate-pulse"></div>
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary-green/20 rounded-full animate-bounce-slow"></div>
+              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-primary-green/30 rounded-full animate-pulse"></div>
             </div>
           </div>
         </div>
@@ -255,7 +255,7 @@ const Hero = () => {
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
         <button
           onClick={(e) => handleSmoothScroll(e, '#about')}
-          className="text-light-grey hover:text-primary-blue transition-colors duration-300 group focus:outline-none focus:ring-2 focus:ring-primary-blue focus:ring-offset-2 focus:ring-offset-darkest-bg rounded-full p-2"
+          className="text-light-grey hover:text-primary-green transition-colors duration-300 group focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-darkest-bg rounded-full p-2"
         >
           <ChevronDown size={24} className="group-hover:scale-110 transition-transform duration-300" />
         </button>

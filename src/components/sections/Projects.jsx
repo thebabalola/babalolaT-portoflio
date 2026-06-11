@@ -109,24 +109,24 @@ const Projects = () => {
       {/* Abstract Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Animated Lines */}
-        <div className="absolute top-20 left-4 sm:left-10 w-20 sm:w-32 h-px bg-gradient-to-r from-transparent via-primary-blue/30 to-transparent animate-pulse"></div>
-        <div className="absolute top-40 right-8 sm:right-20 w-16 sm:w-24 h-px bg-gradient-to-r from-transparent via-deep-blue/40 to-transparent animate-pulse delay-300"></div>
-        <div className="absolute bottom-32 left-1/4 w-24 sm:w-40 h-px bg-gradient-to-r from-transparent via-primary-blue/25 to-transparent animate-pulse delay-700"></div>
+        <div className="absolute top-20 left-4 sm:left-10 w-20 sm:w-32 h-px bg-gradient-to-r from-transparent via-primary-green/30 to-transparent animate-pulse"></div>
+        <div className="absolute top-40 right-8 sm:right-20 w-16 sm:w-24 h-px bg-gradient-to-r from-transparent via-deep-green/40 to-transparent animate-pulse delay-300"></div>
+        <div className="absolute bottom-32 left-1/4 w-24 sm:w-40 h-px bg-gradient-to-r from-transparent via-primary-green/25 to-transparent animate-pulse delay-700"></div>
         
         {/* Geometric Shapes */}
-        <div className="absolute top-16 right-4 sm:right-10 w-3 h-3 border border-primary-blue/30 rotate-45 animate-spin-slow"></div>
-        <div className="absolute top-1/2 left-4 sm:left-8 w-4 h-4 border border-deep-blue/40 rotate-45 animate-pulse delay-500"></div>
-        <div className="absolute bottom-20 right-1/3 w-2 h-2 border border-primary-blue/35 rotate-45 animate-bounce-slow"></div>
+        <div className="absolute top-16 right-4 sm:right-10 w-3 h-3 border border-primary-green/30 rotate-45 animate-spin-slow"></div>
+        <div className="absolute top-1/2 left-4 sm:left-8 w-4 h-4 border border-deep-green/40 rotate-45 animate-pulse delay-500"></div>
+        <div className="absolute bottom-20 right-1/3 w-2 h-2 border border-primary-green/35 rotate-45 animate-bounce-slow"></div>
         
         {/* Abstract Circles */}
-        <div className="absolute top-1/3 left-1/2 w-20 sm:w-32 h-20 sm:h-32 border border-primary-blue/10 rounded-full animate-ping-slow"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-16 sm:w-24 h-16 sm:h-24 border border-deep-blue/15 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute top-1/3 left-1/2 w-20 sm:w-32 h-20 sm:h-32 border border-primary-green/10 rounded-full animate-ping-slow"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-16 sm:w-24 h-16 sm:h-24 border border-deep-green/15 rounded-full animate-pulse delay-1000"></div>
         
         {/* Tech-inspired Grid Pattern */}
         <div className="absolute top-1/4 right-1/4 opacity-10">
           <div className="grid grid-cols-4 gap-1 sm:gap-2">
             {Array.from({ length: 16 }).map((_, i) => (
-              <div key={i} className="w-1 h-1 bg-primary-blue rounded-full animate-pulse" style={{ animationDelay: `${i * 100}ms` }}></div>
+              <div key={i} className="w-1 h-1 bg-primary-green rounded-full animate-pulse" style={{ animationDelay: `${i * 100}ms` }}></div>
             ))}
           </div>
         </div>
@@ -136,7 +136,7 @@ const Projects = () => {
         <div className="mb-12 sm:mb-16 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-light-grey mb-4">My Projects</h2>
           <p className="text-base sm:text-lg text-light-grey max-w-2xl mx-auto px-4">Explore some of my best work in web and blockchain development</p>
-          <div className="w-16 sm:w-20 h-1 bg-primary-blue mx-auto mt-4 sm:mt-6 rounded-full"></div>
+          <div className="w-16 sm:w-20 h-1 bg-primary-green mx-auto mt-4 sm:mt-6 rounded-full"></div>
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -155,23 +155,23 @@ const Projects = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark-accent/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
-                  <Eye className="w-5 h-5 text-primary-blue" />
+                  <Eye className="w-5 h-5 text-primary-green" />
                 </div>
               </div>
               
               <div className="p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-semibold text-light-grey mb-2 group-hover:text-primary-blue transition-colors duration-300">{project.title}</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-light-grey mb-2 group-hover:text-primary-green transition-colors duration-300">{project.title}</h3>
                 <p className="text-sm sm:text-base text-light-grey mb-4 line-clamp-3">{project.description}</p>
                 
                 <div className="mb-4 sm:mb-6">
-                  <h4 className="text-xs sm:text-sm font-medium text-primary-blue mb-2">Technologies:</h4>
+                  <h4 className="text-xs sm:text-sm font-medium text-primary-green mb-2">Technologies:</h4>
                   <div className="flex flex-wrap gap-1.5 sm:gap-2">
                     {project.technologies.map((tech) => {
                       const IconComponent = techIcons[tech];
                       return (
                         <div
                           key={tech}
-                          className="flex items-center justify-center w-8 h-8 bg-deep-blue/30 text-light-grey rounded-full border border-deep-blue/50 hover:border-primary-blue/50 transition-colors duration-300"
+                          className="flex items-center justify-center w-8 h-8 bg-deep-green/30 text-light-grey rounded-full border border-deep-green/50 hover:border-primary-green/50 transition-colors duration-300"
                           title={tech}
                         >
                           {IconComponent && <IconComponent className="w-4 h-4" />}
@@ -186,7 +186,7 @@ const Projects = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="relative z-[5] flex items-center gap-2 bg-primary-blue text-darkest-bg font-semibold px-3 sm:px-4 py-2 rounded-lg hover:bg-primary-blue/80 transition-colors duration-300 text-sm sm:text-base"
+                    className="relative z-[5] flex items-center gap-2 bg-primary-green text-darkest-bg font-semibold px-3 sm:px-4 py-2 rounded-lg hover:bg-primary-green/80 transition-colors duration-300 text-sm sm:text-base"
                     aria-label={`View ${project.title} on GitHub`}
                   >
 
@@ -197,7 +197,7 @@ const Projects = () => {
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="relative z-[5] flex items-center gap-2 border-2 border-primary-blue text-primary-blue font-semibold px-3 sm:px-4 py-2 rounded-lg hover:bg-primary-blue hover:text-darkest-bg transition-colors duration-300 text-sm sm:text-base"
+                    className="relative z-[5] flex items-center gap-2 border-2 border-primary-green text-primary-green font-semibold px-3 sm:px-4 py-2 rounded-lg hover:bg-primary-green hover:text-darkest-bg transition-colors duration-300 text-sm sm:text-base"
                     aria-label={`View live demo of ${project.title}`}
                   >
 
@@ -214,7 +214,7 @@ const Projects = () => {
         <div className="flex justify-center mt-8 sm:mt-12">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="flex items-center gap-2 text-primary-blue font-semibold px-6 py-3 rounded-lg transition-all duration-300 group cursor-pointer"
+            className="flex items-center gap-2 text-primary-green font-semibold px-6 py-3 rounded-lg transition-all duration-300 group cursor-pointer"
             aria-label={showAll ? 'Show fewer projects' : 'Show all projects'}
           >
 

@@ -87,28 +87,28 @@ const Skills = () => {
       {/* Abstract Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Animated Lines */}
-        <div className="absolute top-20 left-10 w-32 h-px bg-gradient-to-r from-transparent via-primary-blue/30 to-transparent animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-24 h-px bg-gradient-to-r from-transparent via-deep-blue/40 to-transparent animate-pulse delay-300"></div>
-        <div className="absolute bottom-32 left-1/4 w-40 h-px bg-gradient-to-r from-transparent via-primary-blue/25 to-transparent animate-pulse delay-700"></div>
+        <div className="absolute top-20 left-10 w-32 h-px bg-gradient-to-r from-transparent via-primary-green/30 to-transparent animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-24 h-px bg-gradient-to-r from-transparent via-deep-green/40 to-transparent animate-pulse delay-300"></div>
+        <div className="absolute bottom-32 left-1/4 w-40 h-px bg-gradient-to-r from-transparent via-primary-green/25 to-transparent animate-pulse delay-700"></div>
         
         {/* Geometric Shapes */}
-        <div className="absolute top-16 right-10 w-3 h-3 border border-primary-blue/30 rotate-45 animate-spin-slow"></div>
-        <div className="absolute top-1/2 left-8 w-4 h-4 border border-deep-blue/40 rotate-45 animate-pulse delay-500"></div>
-        <div className="absolute bottom-20 right-1/3 w-2 h-2 border border-primary-blue/35 rotate-45 animate-bounce-slow"></div>
+        <div className="absolute top-16 right-10 w-3 h-3 border border-primary-green/30 rotate-45 animate-spin-slow"></div>
+        <div className="absolute top-1/2 left-8 w-4 h-4 border border-deep-green/40 rotate-45 animate-pulse delay-500"></div>
+        <div className="absolute bottom-20 right-1/3 w-2 h-2 border border-primary-green/35 rotate-45 animate-bounce-slow"></div>
         
         {/* Abstract Circles */}
-        <div className="absolute top-1/3 left-1/2 w-32 h-32 border border-primary-blue/10 rounded-full animate-ping-slow"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-24 h-24 border border-deep-blue/15 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute top-1/3 left-1/2 w-32 h-32 border border-primary-green/10 rounded-full animate-ping-slow"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-24 h-24 border border-deep-green/15 rounded-full animate-pulse delay-1000"></div>
         
         {/* Diagonal Lines */}
-        <div className="absolute top-0 left-1/3 w-px h-20 bg-gradient-to-b from-transparent via-primary-blue/20 to-transparent transform rotate-12 animate-pulse delay-200"></div>
-        <div className="absolute bottom-0 right-1/4 w-px h-16 bg-gradient-to-t from-transparent via-deep-blue/25 to-transparent transform -rotate-12 animate-pulse delay-600"></div>
+        <div className="absolute top-0 left-1/3 w-px h-20 bg-gradient-to-b from-transparent via-primary-green/20 to-transparent transform rotate-12 animate-pulse delay-200"></div>
+        <div className="absolute bottom-0 right-1/4 w-px h-16 bg-gradient-to-t from-transparent via-deep-green/25 to-transparent transform -rotate-12 animate-pulse delay-600"></div>
         
         {/* Tech-inspired Grid Pattern */}
         <div className="absolute top-1/4 right-1/4 opacity-10">
           <div className="grid grid-cols-4 gap-2">
             {Array.from({ length: 16 }).map((_, i) => (
-              <div key={i} className="w-1 h-1 bg-primary-blue rounded-full animate-pulse" style={{ animationDelay: `${i * 100}ms` }}></div>
+              <div key={i} className="w-1 h-1 bg-primary-green rounded-full animate-pulse" style={{ animationDelay: `${i * 100}ms` }}></div>
             ))}
           </div>
         </div>
@@ -119,7 +119,7 @@ const Skills = () => {
         <div className="mb-16 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-light-grey mb-4">My Skills</h2>
           <p className="text-lg text-light-grey max-w-2xl mx-auto">Technologies and tools I excel in to build innovative solutions</p>
-          <div className="w-20 h-1 bg-primary-blue mx-auto mt-6 rounded-full"></div>
+          <div className="w-20 h-1 bg-primary-green mx-auto mt-6 rounded-full"></div>
         </div>
 
         {/* Skills Grid */}
@@ -139,14 +139,14 @@ const Skills = () => {
                 {/* Category Header */}
                 <div className="flex items-center mb-8">
                   <div className="flex items-center space-x-4">
-                    <div className="p-3 bg-primary-blue/20 border border-primary-blue/30 rounded-xl group-hover:bg-primary-blue/30 group-hover:border-primary-blue/50 transition-all duration-300">
-                      <IconComponent className="w-6 h-6 text-primary-blue" />
+                    <div className="p-3 bg-primary-green/20 border border-primary-green/30 rounded-xl group-hover:bg-primary-green/30 group-hover:border-primary-green/50 transition-all duration-300">
+                      <IconComponent className="w-6 h-6 text-primary-green" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-white group-hover:text-primary-blue transition-colors duration-300">
+                      <h3 className="text-2xl font-bold text-white group-hover:text-primary-green transition-colors duration-300">
                         {category.title}
                       </h3>
-                      <div className="w-16 h-0.5 bg-primary-blue/60 mt-1 group-hover:w-24 transition-all duration-300"></div>
+                      <div className="w-16 h-0.5 bg-primary-green/60 mt-1 group-hover:w-24 transition-all duration-300"></div>
                     </div>
                   </div>
                 </div>
@@ -166,8 +166,8 @@ const Skills = () => {
                           transitionDelay: `${index * 100}ms`
                         }}
                       >
-                        <div className="p-3 border border-primary-blue/40 rounded-full group-hover/item:bg-primary-blue group-hover/item:border-primary-blue transition-all duration-300">
-                          <SkillIcon className="w-10 h-10 text-primary-blue group-hover/item:text-white" />
+                        <div className="p-3 border border-primary-green/40 rounded-full group-hover/item:bg-primary-green group-hover/item:border-primary-green transition-all duration-300">
+                          <SkillIcon className="w-10 h-10 text-primary-green group-hover/item:text-white" />
                         </div>
                         <span className="text-light-grey group-hover/item:text-white font-medium text-xs text-center transition-colors duration-300">
                           {skill.name}
@@ -188,7 +188,7 @@ const Skills = () => {
               {Array.from({ length: 5 }).map((_, i) => (
                 <div
                   key={i}
-                  className="w-1 h-1 bg-primary-blue/40 rounded-full animate-pulse"
+                  className="w-1 h-1 bg-primary-green/40 rounded-full animate-pulse"
                   style={{ animationDelay: `${i * 200}ms` }}
                 ></div>
               ))}

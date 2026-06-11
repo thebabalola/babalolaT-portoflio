@@ -30,11 +30,11 @@ const Header = () => {
       const header = headerRef.current;
       
       if (currentScrollY > 50) {
-        header.classList.add('backdrop-blur-xl', 'bg-darkest-bg/95', 'shadow-glow', 'border-b', 'border-primary-blue/20');
+        header.classList.add('backdrop-blur-xl', 'bg-darkest-bg/95', 'shadow-glow', 'border-b', 'border-primary-green/20');
         header.classList.remove('bg-darkest-bg/80');
         header.style.transform = currentScrollY > lastScrollY && currentScrollY > 200 ? 'translateY(-100%)' : 'translateY(0)';
       } else {
-        header.classList.remove('backdrop-blur-xl', 'bg-darkest-bg/95', 'shadow-glow', 'border-b', 'border-primary-blue/20');
+        header.classList.remove('backdrop-blur-xl', 'bg-darkest-bg/95', 'shadow-glow', 'border-b', 'border-primary-green/20');
         header.classList.add('bg-darkest-bg/80');
         header.style.transform = 'translateY(0)';
       }
@@ -119,11 +119,11 @@ const Header = () => {
         }}
       >
         {/* Animated background gradient */}
-        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary-blue/5 via-transparent to-primary-blue/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary-green/5 via-transparent to-primary-green/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
         
         {/* Floating particles effect */}
         <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none">
-          <div className="absolute w-2 h-2 bg-primary-blue/30 rounded-full animate-float" style={{
+          <div className="absolute w-2 h-2 bg-primary-green/30 rounded-full animate-float" style={{
             top: '20%',
             left: '10%',
             animationDelay: '0s',
@@ -135,7 +135,7 @@ const Header = () => {
             animationDelay: '2s',
             animationDuration: '8s'
           }}></div>
-          <div className="absolute w-1.5 h-1.5 bg-primary-blue/20 rounded-full animate-float" style={{
+          <div className="absolute w-1.5 h-1.5 bg-primary-green/20 rounded-full animate-float" style={{
             bottom: '30%',
             left: '80%',
             animationDelay: '4s',
@@ -163,8 +163,8 @@ const Header = () => {
                   onClick={(e) => handleSmoothScroll(e, link.href)}
                   className={`group relative px-4 py-2 rounded-xl transition-all duration-300 ${
                     activeSection === link.href.substring(1) 
-                      ? 'text-primary-blue' 
-                      : 'text-light-grey hover:text-primary-blue'
+                      ? 'text-primary-green' 
+                      : 'text-light-grey hover:text-primary-green'
                   }`}
                 >
                   <span className="relative z-10 font-medium text-sm flex items-center gap-2">
@@ -173,11 +173,11 @@ const Header = () => {
                   </span>
                   
                   {/* Hover effect background */}
-                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary-blue/10 to-primary-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary-green/10 to-primary-green/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                   
                   {/* Active indicator */}
                   {activeSection === link.href.substring(1) && (
-                    <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-primary-blue rounded-full animate-pulse"></div>
+                    <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-primary-green rounded-full animate-pulse"></div>
                   )}
                 </button>
               ))}
@@ -188,7 +188,7 @@ const Header = () => {
               <button
                 ref={mobileMenuButtonRef}
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="relative group p-3 rounded-xl text-light-grey hover:text-primary-blue hover:bg-primary-blue/10 transition-all duration-300"
+                className="relative group p-3 rounded-xl text-light-grey hover:text-primary-green hover:bg-primary-green/10 transition-all duration-300"
               >
                 {/* Animated hamburger icon */}
                 <div className="relative w-6 h-6 flex flex-col justify-center items-center">
@@ -204,7 +204,7 @@ const Header = () => {
                 </div>
                 
                 {/* Hover effect */}
-                <div className="absolute inset-0 rounded-xl bg-primary-blue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 rounded-xl bg-primary-green/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
             </div>
           </div>
@@ -220,15 +220,15 @@ const Header = () => {
               display: 'none'
             }}
           >
-            <div className="px-2 pt-4 pb-6 space-y-2 bg-dark-accent/50 backdrop-blur-md rounded-2xl mt-4 border border-primary-blue/20">
+            <div className="px-2 pt-4 pb-6 space-y-2 bg-dark-accent/50 backdrop-blur-md rounded-2xl mt-4 border border-primary-green/20">
               {navLinks.map((link, index) => (
                 <button
                   key={link.name}
                   onClick={(e) => handleSmoothScroll(e, link.href)}
                   className={`group relative w-full text-left px-4 py-3 rounded-xl transition-all duration-300 flex items-center gap-3 ${
                     activeSection === link.href.substring(1) 
-                      ? 'text-primary-blue' 
-                      : 'text-light-grey hover:text-primary-blue'
+                      ? 'text-primary-green' 
+                      : 'text-light-grey hover:text-primary-green'
                   }`}
                   style={{
                     animationDelay: `${index * 0.1}s`,
@@ -239,11 +239,11 @@ const Header = () => {
                   <span className="font-medium">{link.name}</span>
                   
                   {/* Hover effect */}
-                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary-blue/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary-green/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                   
                   {/* Active indicator for mobile */}
                   {activeSection === link.href.substring(1) && (
-                    <div className="absolute right-3 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-primary-blue rounded-full animate-pulse"></div>
+                    <div className="absolute right-3 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-primary-green rounded-full animate-pulse"></div>
                   )}
                 </button>
               ))}
