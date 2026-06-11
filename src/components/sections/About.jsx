@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { Briefcase, Users, Zap } from 'lucide-react';
+import { Briefcase, Users } from 'lucide-react';
 
 const About = () => {
   const sectionRef = useRef(null);
@@ -29,8 +29,7 @@ const About = () => {
 
   const stats = [
     { number: "2+", label: "Years in Tech", icon: Briefcase },
-    { number: "10+", label: "Projects Completed", icon: Users },
-    { number: "10+", label: "Open Source Contributions", icon: Zap }
+    { number: "10+", label: "Projects Completed", icon: Users }
   ];
 
   return (
