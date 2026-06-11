@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Github, Linkedin, Mail, ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const sectionRef = useRef(null);
@@ -113,15 +114,7 @@ const Hero = () => {
     }, 500);
   }, []);
 
-  const handleSmoothScroll = (e, targetId) => {
-    e.preventDefault();
-    const targetElement = document.querySelector(targetId);
-    if (targetElement) {
-      const headerHeight = document.querySelector('#header')?.offsetHeight || 0;
-      const targetPosition = targetElement.offsetTop - headerHeight;
-      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-    }
-  };
+  // Removed handleSmoothScroll since we now use Link for routing
 
   const socialLinks = [
     {
@@ -192,18 +185,18 @@ const Hero = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center animate-fade-in animation-delay-700">
-              <button
-                onClick={(e) => handleSmoothScroll(e, '#projects')}
+              <Link
+                to="/projects"
                 className="bg-primary-green text-darkest-bg font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-glow active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-darkest-bg"
               >
                 View My Work
-              </button>
-              <button
-                onClick={(e) => handleSmoothScroll(e, '#contact')}
+              </Link>
+              <Link
+                to="/contact"
                 className="border-2 border-primary-green text-primary-green font-semibold px-6 py-3 rounded-lg hover:bg-primary-green hover:text-darkest-bg transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-darkest-bg"
               >
                 Get In Touch
-              </button>
+              </Link>
             </div>
             
             {/* Social Icons */}
@@ -253,12 +246,12 @@ const Hero = () => {
       </div>
       
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
-        <button
-          onClick={(e) => handleSmoothScroll(e, '#about')}
-          className="text-light-grey hover:text-primary-green transition-colors duration-300 group focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-darkest-bg rounded-full p-2"
+        <Link
+          to="/about"
+          className="text-light-grey hover:text-primary-green transition-colors duration-300 group focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-darkest-bg rounded-full p-2 block"
         >
           <ChevronDown size={24} className="group-hover:scale-110 transition-transform duration-300" />
-        </button>
+        </Link>
       </div>
     </section>
   );

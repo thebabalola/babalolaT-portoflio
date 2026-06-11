@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Hero from '../components/sections/Hero';
 import About from '../components/sections/About';
 import Skills from '../components/sections/Skills';
@@ -34,14 +35,18 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <>
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <WhyHireMe />
-      <Contact />
-    </>
+    <Routes>
+      <Route path="/" element={<Hero />} />
+      <Route path="/about" element={
+        <>
+          <About />
+          <WhyHireMe />
+        </>
+      } />
+      <Route path="/skills" element={<Skills />} />
+      <Route path="/projects" element={<Projects />} />
+      <Route path="/contact" element={<Contact />} />
+    </Routes>
   );
 };
 

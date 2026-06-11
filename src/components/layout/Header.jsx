@@ -1,24 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 import { Home, User, Zap, Rocket, Mail } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const headerRef = useRef(null);
   const mobileMenuButtonRef = useRef(null);
   const mobileMenuRef = useRef(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
-
-  // Smooth scrolling
-  const handleSmoothScroll = (e, targetId) => {
-    e.preventDefault();
-    const targetElement = document.querySelector(targetId);
-    if (targetElement) {
-      const headerHeight = headerRef.current.offsetHeight;
-      const targetPosition = targetElement.offsetTop - headerHeight;
-      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
-    }
-  };
+  const location = useLocation();
 
   // Header behavior with enhanced animations
   useEffect(() => {
@@ -53,30 +42,6 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Active section detection
-  useEffect(() => {
-    const sections = ['home', 'about', 'skills', 'projects', 'contact'];
-    const observerOptions = {
-      rootMargin: '-20% 0px -80% 0px',
-      threshold: 0
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-        }
-      });
-    }, observerOptions);
-
-    sections.forEach((section) => {
-      const element = document.getElementById(section);
-      if (element) observer.observe(element);
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
   // Mobile menu animation
   useEffect(() => {
     const mobileMenu = mobileMenuRef.current;
@@ -98,12 +63,16 @@ const Header = () => {
   }, [isMobileMenuOpen]);
 
   const navLinks = [
-    { name: 'Home', href: '#home', icon: Home },
-    { name: 'About', href: '#about', icon: User },
-    { name: 'Skills', href: '#skills', icon: Zap },
-    { name: 'Projects', href: '#projects', icon: Rocket },
-    { name: 'Contact', href: '#contact', icon: Mail },
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'About', href: '/about', icon: User },
+    { name: 'Skills', href: '/skills', icon: Zap },
+    { name: 'Projects', href: '/projects', icon: Rocket },
+    { name: 'Contact', href: '/contact', icon: Mail },
   ];
+
+  const handleLinkClick = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <>
@@ -113,7 +82,7 @@ const Header = () => {
       <header
         id="header"
         ref={headerRef}
-        className="fixed top-4 left-4 right-4 z-50 transition-all duration-500 ease-out bg-darkest-bg/80 backdrop-blur-md rounded-2xl border border-dark-accent/50 shadow-card"
+        className="fixed top-4 left-4 right-4 z-50 transition-all duration-500 ease-out bg-darkest-bg/80 backdrop-blur-md rounded-2xl border border-dark-accent/50 shadow-card hover:shadow-glow"
         style={{
           animation: 'slideDown 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards'
         }}
@@ -147,22 +116,23 @@ const Header = () => {
           <div className="flex justify-between items-center h-16">
             {/* Simple logo name */}
             <div className="flex-shrink-0">
-              <button
-                onClick={(e) => handleSmoothScroll(e, '#home')}
+              <Link
+                to="/"
+                onClick={handleLinkClick}
                 className="text-2xl font-bold text-white hover:scale-105 transition-transform duration-300"
               >
                 Babalola
-              </button>
+              </Link>
             </div>
 
             {/* Desktop Navigation with enhanced styling */}
             <div className="hidden md:flex ml-10 items-center space-x-2">
               {navLinks.map((link) => (
-                <button
+                <Link
                   key={link.name}
-                  onClick={(e) => handleSmoothScroll(e, link.href)}
+                  to={link.href}
                   className={`group relative px-4 py-2 rounded-xl transition-all duration-300 ${
-                    activeSection === link.href.substring(1) 
+                    location.pathname === link.href 
                       ? 'text-primary-green' 
                       : 'text-light-grey hover:text-primary-green'
                   }`}
@@ -176,10 +146,10 @@ const Header = () => {
                   <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary-green/10 to-primary-green/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                   
                   {/* Active indicator */}
-                  {activeSection === link.href.substring(1) && (
+                  {location.pathname === link.href && (
                     <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-primary-green rounded-full animate-pulse"></div>
                   )}
-                </button>
+                </Link>
               ))}
             </div>
 
@@ -222,11 +192,12 @@ const Header = () => {
           >
             <div className="px-2 pt-4 pb-6 space-y-2 bg-dark-accent/50 backdrop-blur-md rounded-2xl mt-4 border border-primary-green/20">
               {navLinks.map((link, index) => (
-                <button
+                <Link
                   key={link.name}
-                  onClick={(e) => handleSmoothScroll(e, link.href)}
+                  to={link.href}
+                  onClick={handleLinkClick}
                   className={`group relative w-full text-left px-4 py-3 rounded-xl transition-all duration-300 flex items-center gap-3 ${
-                    activeSection === link.href.substring(1) 
+                    location.pathname === link.href 
                       ? 'text-primary-green' 
                       : 'text-light-grey hover:text-primary-green'
                   }`}
@@ -242,10 +213,10 @@ const Header = () => {
                   <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary-green/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                   
                   {/* Active indicator for mobile */}
-                  {activeSection === link.href.substring(1) && (
+                  {location.pathname === link.href && (
                     <div className="absolute right-3 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-primary-green rounded-full animate-pulse"></div>
                   )}
-                </button>
+                </Link>
               ))}
             </div>
           </div>
