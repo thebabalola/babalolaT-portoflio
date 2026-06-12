@@ -92,7 +92,7 @@ const About = () => {
               <img 
                 src="/about-me-removebg.png" 
                 alt="Profile" 
-                className="relative w-80 h-80 object-cover shadow-2xl hover:scale-105 transition-all duration-500 animate-breathing"
+                className="relative w-96 h-96 object-cover hover:scale-105 transition-all duration-500 animate-breathing"
                 style={{ filter: 'hue-rotate(200deg) saturate(1.5)' }}
               />
             </div>
