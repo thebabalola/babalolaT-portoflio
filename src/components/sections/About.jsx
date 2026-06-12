@@ -53,7 +53,7 @@ const About = () => {
                 I'm a software engineer with a frontend background and a growing focus on backend systems, Rust, and protocol engineering. I started my tech journey in 2023 after transitioning from interior design and have since built web applications with React, Next.js, TypeScript, and JavaScript while exploring blockchain and distributed systems.
               </p>
               <p className="text-base text-light-grey leading-relaxed">
-                Beyond personal projects, I've contributed to open-source projects including the Rust compiler, Servo browser engine, and the Rust Interop Initiative, where I've worked on bug fixes, debugging, Rust/C++ interoperability, and systems-level code. These experiences pushed me beyond building interfaces and sparked my interest in understanding how software works beneath the surface.
+                Beyond personal projects, I've contributed to open-source projects including the Rust compiler, Servo browser engine, and the Rust Interop Initiative, where I've worked on bug fixes, debugging, and systems-level code. These experiences pushed me beyond building interfaces and sparked my interest in understanding how software works beneath the surface.
               </p>
               <p className="text-base text-light-grey leading-relaxed">
                 Today, I'm focused on growing into systems and protocol engineering while continuing to contribute to open source and build software that solves real-world problems.
