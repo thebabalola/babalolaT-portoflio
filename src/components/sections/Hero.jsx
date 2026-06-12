@@ -245,7 +245,7 @@ const Hero = () => {
         </div>
       </div>
       
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-horizontal">
+      <div className="hidden md:block absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-horizontal">
         <Link
           to="/about"
           className="text-light-grey hover:text-primary-green hover:bg-primary-green/10 transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-darkest-bg rounded-full p-3 block"
