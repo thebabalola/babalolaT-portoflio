@@ -57,7 +57,7 @@ const WhyHireMe = () => {
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pt-12 pb-4">
             
-            <div className="group cursor-pointer p-6 bg-dark-accent/50 rounded-lg text-center glass-effect border border-transparent hover:border-primary-green transition-all relative overflow-hidden hover:shadow-glow hover:-translate-y-2 duration-300">
+            <div className="group cursor-pointer p-6 bg-dark-accent/50 rounded-3xl text-center glass-effect border border-transparent hover:border-primary-green transition-all relative overflow-hidden hover:shadow-glow hover:-translate-y-2 duration-300">
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
               </div>
@@ -70,7 +70,7 @@ const WhyHireMe = () => {
               </div>
             </div>
 
-            <div className="group cursor-pointer p-6 bg-dark-accent/50 rounded-lg text-center glass-effect border border-transparent hover:border-primary-green transition-all relative overflow-hidden hover:shadow-glow hover:-translate-y-2 duration-300">
+            <div className="group cursor-pointer p-6 bg-dark-accent/50 rounded-3xl text-center glass-effect border border-transparent hover:border-primary-green transition-all relative overflow-hidden hover:shadow-glow hover:-translate-y-2 duration-300">
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
               </div>
@@ -83,7 +83,7 @@ const WhyHireMe = () => {
               </div>
             </div>
 
-            <div className="group cursor-pointer p-6 bg-dark-accent/50 rounded-lg text-center glass-effect border border-transparent hover:border-primary-green transition-all relative overflow-hidden hover:shadow-glow hover:-translate-y-2 duration-300">
+            <div className="group cursor-pointer p-6 bg-dark-accent/50 rounded-3xl text-center glass-effect border border-transparent hover:border-primary-green transition-all relative overflow-hidden hover:shadow-glow hover:-translate-y-2 duration-300">
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
               </div>
@@ -96,7 +96,7 @@ const WhyHireMe = () => {
               </div>
             </div>
 
-            <div className="group cursor-pointer p-6 bg-dark-accent/50 rounded-lg text-center glass-effect border border-transparent hover:border-primary-green transition-all relative overflow-hidden hover:shadow-glow hover:-translate-y-2 duration-300">
+            <div className="group cursor-pointer p-6 bg-dark-accent/50 rounded-3xl text-center glass-effect border border-transparent hover:border-primary-green transition-all relative overflow-hidden hover:shadow-glow hover:-translate-y-2 duration-300">
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
               </div>

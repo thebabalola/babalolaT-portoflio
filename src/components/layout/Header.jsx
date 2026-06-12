@@ -19,12 +19,12 @@ const Header = () => {
       const header = headerRef.current;
       
       if (currentScrollY > 50) {
-        header.classList.add('backdrop-blur-xl', 'bg-darkest-bg/95', 'shadow-glow', 'border-b', 'border-primary-green/20');
-        header.classList.remove('bg-darkest-bg/80');
+        header.classList.add('backdrop-blur-xl', 'bg-dark-accent/95', 'shadow-glow', 'border-b', 'border-primary-green/20');
+        header.classList.remove('bg-dark-accent/80');
         header.style.transform = currentScrollY > lastScrollY && currentScrollY > 200 ? 'translateY(-100%)' : 'translateY(0)';
       } else {
-        header.classList.remove('backdrop-blur-xl', 'bg-darkest-bg/95', 'shadow-glow', 'border-b', 'border-primary-green/20');
-        header.classList.add('bg-darkest-bg/80');
+        header.classList.remove('backdrop-blur-xl', 'bg-dark-accent/95', 'shadow-glow', 'border-b', 'border-primary-green/20');
+        header.classList.add('bg-dark-accent/80');
         header.style.transform = 'translateY(0)';
       }
       lastScrollY = currentScrollY;
@@ -82,7 +82,7 @@ const Header = () => {
       <header
         id="header"
         ref={headerRef}
-        className="fixed top-4 left-4 right-4 z-50 transition-all duration-500 ease-out bg-darkest-bg/80 backdrop-blur-md rounded-2xl border border-dark-accent/50 shadow-card hover:shadow-glow"
+        className="fixed top-4 left-4 right-4 z-50 transition-all duration-500 ease-out bg-dark-accent/80 backdrop-blur-md rounded-2xl border border-dark-accent/50 shadow-card hover:shadow-glow"
         style={{
           animation: 'slideDown 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards'
         }}
@@ -121,7 +121,7 @@ const Header = () => {
                 onClick={handleLinkClick}
                 className="text-2xl font-bold text-white hover:scale-105 transition-transform duration-300"
               >
-                Babalola
+                Babalola T
               </Link>
             </div>
 
