@@ -184,7 +184,7 @@ const Hero = () => {
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center animate-fade-in animation-delay-700">
+            <div className="flex flex-row gap-4 justify-center lg:justify-start items-center animate-fade-in animation-delay-700">
               <Link
                 to="/projects"
                 className="bg-primary-green text-darkest-bg font-semibold px-4 py-2 text-sm md:text-base md:px-6 md:py-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-glow active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-darkest-bg"
