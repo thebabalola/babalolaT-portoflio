@@ -124,7 +124,7 @@ const Hero = () => {
       hoverColor: 'hover:text-white hover:bg-[#333]'
     },
     {
-      href: 'https://linkedin.com/in/babalola-taiwo',
+      href: 'https://www.linkedin.com/in/babalola-t-0ba512122/',
       icon: Linkedin,
       label: 'LinkedIn',
       hoverColor: 'hover:text-white hover:bg-[#0077b5]'
@@ -141,7 +141,7 @@ const Hero = () => {
     <section
       id="home"
       ref={sectionRef}
-      className="min-h-screen flex items-center justify-center relative overflow-hidden animate-on-scroll pt-24 md:pt-0"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden animate-on-scroll pt-28 md:pt-0"
     >
       <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none" />
       {/* Background blur overlay - removed gradient to match skills section */}
@@ -159,13 +159,13 @@ const Hero = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Side-by-side layout: Text on left, Image on right */}
-        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-6 lg:gap-14">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-14">
           
           {/* Left side - Text content */}
-          <div className="flex-1 text-center lg:text-left space-y-5 lg:space-y-8 lg:order-1">
-            <div className="space-y-3">
+          <div className="flex-1 text-center lg:text-left space-y-8 lg:order-1">
+            <div className="space-y-4">
               <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold">
-                <span className="block text-light-grey animate-fade-in text-base md:text-2xl lg:text-3xl">Hi, I'm</span>
+                <span className="block text-light-grey animate-fade-in text-lg md:text-2xl lg:text-3xl">Hi, I'm</span>
                 <span 
                   ref={nameRef}
                   className="block gradient-text will-change-transform"
@@ -180,20 +180,20 @@ const Hero = () => {
                 </span>
               </h1>
               <p className="text-sm md:text-lg text-light-grey max-w-2xl mx-auto lg:mx-0 animate-fade-in animation-delay-300">
-                <span className="font-bold">Frontend & Blockchain Developer</span> crafting innovative web and decentralized solutions
+                <span className="font-bold">Frontend & Blockchain Developer</span> crafting innovative <br></br> web and decentralized solutions
               </p>
             </div>
             
-            <div className="flex flex-row gap-3 justify-center lg:justify-start items-center animate-fade-in animation-delay-700">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center animate-fade-in animation-delay-700">
               <Link
                 to="/projects"
-                className="bg-primary-green text-darkest-bg font-semibold px-4 py-2.5 md:px-6 md:py-3 text-sm md:text-base rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-glow active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-darkest-bg"
+                className="bg-primary-green text-darkest-bg font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-glow active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-darkest-bg"
               >
                 View My Work
               </Link>
               <Link
                 to="/contact"
-                className="border-2 border-primary-green text-primary-green font-semibold px-4 py-2.5 md:px-6 md:py-3 text-sm md:text-base rounded-lg hover:bg-primary-green hover:text-darkest-bg transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-darkest-bg"
+                className="border-2 border-primary-green text-primary-green font-semibold px-6 py-3 rounded-lg hover:bg-primary-green hover:text-darkest-bg transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-darkest-bg"
               >
                 Get In Touch
               </Link>
@@ -212,7 +212,7 @@ const Hero = () => {
                     className={`group relative p-3 rounded-lg border-2 border-light-grey/30 text-light-grey transition-all duration-300 hover:scale-110 hover:border-primary-green ${social.hoverColor} focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-darkest-bg`}
                     title={social.label}
                   >
-                    <IconComponent size={20} className="transition-colors duration-300 relative z-10" />
+                    <IconComponent size={24} className="transition-colors duration-300 relative z-10" />
                     
                     {/* Hover glow effect */}
                     <div className="absolute inset-0 rounded-lg bg-primary-green/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
@@ -223,10 +223,10 @@ const Hero = () => {
           </div>
 
           {/* Right side - Profile Picture */}
-          <div className="flex-shrink-0 lg:order-2 animate-fade-in animation-delay-400 order-first lg:order-none">
+          <div className="flex-shrink-0 lg:order-2 animate-fade-in animation-delay-400">
             <div className="relative group">
               {/* Profile Picture Container - Circular */}
-              <div className="relative w-44 h-44 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary-green/30 shadow-glow transition-all duration-500 hover:border-primary-green hover:shadow-glow-lg hover:scale-105">
+              <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary-green/30 shadow-glow transition-all duration-500 hover:border-primary-green hover:shadow-glow-lg hover:scale-105">
                 {/* Replace 'your-image.jpg' with your actual image path */}
                 <img 
                   src="/profile-picture3.png" 

@@ -7,6 +7,7 @@ const Header = () => {
   const headerRef = useRef(null);
   const location = useLocation();
   const { theme, toggleTheme } = useTheme();
+  const [activeLabel, setActiveLabel] = useState(null);
 
   // Header scroll behavior
   useEffect(() => {
@@ -153,14 +154,14 @@ const Header = () => {
       </header>
 
       {/* ── MOBILE BOTTOM NAV ──────────────────────────────────── */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-dark-accent/95 backdrop-blur-xl border-t border-primary-green/20 flex justify-around items-center h-16 px-2">
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-dark-accent/95 backdrop-blur-xl border-t border-primary-green/20 flex justify-around items-center h-16 px-1 pb-1">
         {navLinks.map((link) => {
           const isActive = location.pathname === link.href;
           return (
             <Link
               key={link.name}
               to={link.href}
-              className="relative flex flex-col items-center justify-center flex-1 h-full gap-0.5 group"
+              className="relative flex flex-col items-center justify-center flex-1 h-full group pt-1"
             >
               {/* Icon */}
               <link.icon
@@ -171,19 +172,15 @@ const Header = () => {
                     : 'text-light-grey group-hover:text-primary-green group-hover:scale-110'
                 }`}
               />
-              {/* Always-visible label */}
+
+              {/* Label always visible */}
               <span
-                className={`text-[10px] font-medium transition-colors duration-300 ${
-                  isActive ? 'text-primary-green' : 'text-light-grey group-hover:text-primary-green'
+                className={`text-[10px] mt-1 transition-colors duration-300 font-medium ${
+                  isActive ? 'text-primary-green' : 'text-light-grey/80 group-hover:text-primary-green'
                 }`}
               >
                 {link.name}
               </span>
-
-              {/* Active dot */}
-              {isActive && (
-                <span className="absolute top-1 w-1 h-1 rounded-full bg-primary-green animate-pulse"></span>
-              )}
             </Link>
           );
         })}
