@@ -51,7 +51,7 @@ const Skills = () => {
         { name: 'Next.js', icon: SiNextdotjs },
         { name: 'JavaScript', icon: SiJavascript },
         { name: 'TypeScript', icon: SiTypescript },
-        { name: 'Tailwind CSS', icon: SiTailwindcss }
+        { name: 'Tailwind CSS', icon: SiTailwindcss, hideOnMobile: true }
       ]
     },
     {
@@ -151,7 +151,7 @@ const Skills = () => {
                     return (
                       <div
                         key={skill.name}
-                        className="skill-item group/item flex flex-col items-center space-y-2 hover:scale-105 transition-all duration-300"
+                        className={`skill-item group/item flex flex-col items-center space-y-2 hover:scale-105 transition-all duration-300 ${skill.hideOnMobile ? 'hidden md:flex' : ''}`}
                         style={{ 
                           transform: 'translateY(20px)', 
                           opacity: 0, 
