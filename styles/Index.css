@@ -206,7 +206,7 @@ input:focus, select:focus, textarea:focus {
   position: relative;
 }
 
-#home::before {
+.dark #home::before {
   content: '';
   position: absolute;
   top: 0;

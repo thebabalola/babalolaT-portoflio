@@ -73,7 +73,7 @@ const About = () => {
                   <div className="flex-1">
                     <div className="text-lg font-bold text-primary-green group-hover:text-deep-green transition-colors duration-300 flex items-center gap-1">
                       <span>{stat.number}</span>
-                      <span className="text-light-grey text-xs group-hover:text-white transition-colors duration-300">
+                      <span className="text-light-grey text-xs group-hover:text-primary-green transition-colors duration-300">
                         {stat.label}
                       </span>
                     </div>

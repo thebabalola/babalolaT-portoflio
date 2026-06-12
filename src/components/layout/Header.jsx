@@ -121,7 +121,7 @@ const Header = () => {
               <Link
                 to="/"
                 onClick={handleLinkClick}
-                className="text-2xl font-bold text-white hover:scale-105 transition-transform duration-300"
+                className="text-2xl font-bold text-light-grey hover:scale-105 transition-transform duration-300"
               >
                 Babalola T
               </Link>

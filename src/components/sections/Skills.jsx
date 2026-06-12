@@ -143,7 +143,7 @@ const Skills = () => {
                       <IconComponent className="w-6 h-6 text-primary-green" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-white group-hover:text-primary-green transition-colors duration-300">
+                      <h3 className="text-2xl font-bold text-light-grey group-hover:text-primary-green transition-colors duration-300">
                         {category.title}
                       </h3>
                       <div className="w-16 h-0.5 bg-primary-green/60 mt-1 group-hover:w-24 transition-all duration-300"></div>
@@ -167,9 +167,9 @@ const Skills = () => {
                         }}
                       >
                         <div className="p-3 border border-primary-green/40 rounded-full group-hover/item:bg-primary-green group-hover/item:border-primary-green transition-all duration-300">
-                          <SkillIcon className="w-10 h-10 text-primary-green group-hover/item:text-white" />
+                          <SkillIcon className="w-10 h-10 text-primary-green group-hover/item:text-darkest-bg" />
                         </div>
-                        <span className="text-light-grey group-hover/item:text-white font-medium text-xs text-center transition-colors duration-300">
+                        <span className="text-light-grey group-hover/item:text-primary-green font-medium text-xs text-center transition-colors duration-300">
                           {skill.name}
                         </span>
                       </div>
