@@ -15,28 +15,28 @@
   --mouse-x: 0px;
   --mouse-y: 0px;
   
-  /* Light Mode Palette (Inverted RGB) */
-  --darkest-bg: 228, 235, 156;    /* #E4EB9C Mindaro */
-  --dark-accent: 141, 167, 80;    /* #8DA750 Asparagus */
-  --medium-grey: 83, 123, 47;     /* #537B2F Fern Green */
-  --deep-green: 83, 123, 47;      /* #537B2F Fern Green */
-  --primary-green: 45, 81, 40;    /* #2D5128 Cal Poly Green */
-  --light-grey: 20, 44, 20;       /* #142C14 Dark Green */
-  --primary-green-rgb: 45, 81, 40;
+  /* Light Mode Palette - space-separated for Tailwind alpha support */
+  --darkest-bg: 228 235 156;    /* #E4EB9C Mindaro */
+  --dark-accent: 141 167 80;    /* #8DA750 Asparagus */
+  --medium-grey: 83 123 47;     /* #537B2F Fern Green */
+  --deep-green: 83 123 47;      /* #537B2F Fern Green */
+  --primary-green: 45 81 40;    /* #2D5128 Cal Poly Green */
+  --light-grey: 20 44 20;       /* #142C14 Dark Green */
 }
 
 .dark {
-  /* Dark Mode Palette (Original RGB) */
-  --darkest-bg: 20, 44, 20;       /* #142C14 */
-  --dark-accent: 45, 81, 40;      /* #2D5128 */
-  --medium-grey: 83, 123, 47;     /* #537B2F */
-  --deep-green: 83, 123, 47;      /* #537B2F */
-  --primary-green: 141, 167, 80;  /* #8DA750 */
-  --light-grey: 228, 235, 156;    /* #E4EB9C */
-  --primary-green-rgb: 141, 167, 80;
+  /* Dark Mode Palette - space-separated for Tailwind alpha support */
+  --darkest-bg: 20 44 20;       /* #142C14 */
+  --dark-accent: 45 81 40;      /* #2D5128 */
+  --medium-grey: 83 123 47;     /* #537B2F */
+  --deep-green: 83 123 47;      /* #537B2F */
+  --primary-green: 141 167 80;  /* #8DA750 */
+  --light-grey: 228 235 156;    /* #E4EB9C */
 }
 
 html {
+  margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
   background-color: rgb(var(--darkest-bg));
   color: rgb(var(--light-grey));
@@ -44,6 +44,8 @@ html {
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: 'Inter', system-ui, sans-serif;
   background-color: rgb(var(--darkest-bg));
   color: rgb(var(--light-grey));
