@@ -38,20 +38,20 @@ html {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  background-color: rgb(var(--darkest-bg));
-  color: rgb(var(--light-grey));
-  transition: background-color 0.3s ease, color 0.3s ease;
+  /* background-color: rgb(var(--darkest-bg)); */
+  /* color: rgb(var(--light-grey)); */
+  /* transition: background-color 0.3s ease, color 0.3s ease; */
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Inter', system-ui, sans-serif;
-  background-color: rgb(var(--darkest-bg));
-  color: rgb(var(--light-grey));
+  /* background-color: rgb(var(--darkest-bg)); */
+  /* color: rgb(var(--light-grey)); */
   line-height: 1.6;
   overflow-x: hidden;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  /* transition: background-color 0.3s ease, color 0.3s ease; */
 }
 
 /* Advanced Glow Effects */
