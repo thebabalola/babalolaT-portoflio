@@ -60,21 +60,17 @@ const Skills = () => {
       skills: [
         { name: 'Rust', icon: SiRust },
         { name: 'Solidity', icon: SiSolidity },
-        { name: 'Foundry', icon: Hammer },
         { name: 'Hardhat', icon: HardHat },
         { name: 'Subgraph', icon: SiGraphql },
-        { name: 'Wagmi', icon: SiEthereum  },
-        { name: 'AppKit', icon: Package }
+        { name: 'Foundry', icon: Hammer }
       ]
     },
     {
       title: 'Tools & Frameworks',
       icon: Wrench,
       skills: [
-        { name: 'GitHub', icon: SiGithub },
-        { name: 'Vercel', icon: SiVercel },
-         { name: 'Chrome DevTools', icon: SiGooglechrome },
-        { name: 'VS Code', icon: Play }
+        { name: 'GitHub Accounts', icon: SiGithub },
+        { name: 'Chrome DevTools', icon: SiGooglechrome }
       ]
     }
   ];
