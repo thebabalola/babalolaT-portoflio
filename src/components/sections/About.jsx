@@ -46,7 +46,7 @@ const About = () => {
           {/* Left Content */}
           <div 
             ref={leftContentRef}
-            className="lg:col-span-7 xl:col-span-8 space-y-6 opacity-0 transform translate-x-[-50px] transition-all duration-1000 ease-out"
+            className="lg:col-span-6 xl:col-span-6 space-y-6 opacity-0 transform translate-x-[-50px] transition-all duration-1000 ease-out"
           >
             <div className="space-y-4">
               <p className="text-base text-light-grey leading-relaxed">
@@ -86,7 +86,7 @@ const About = () => {
           {/* Right Content - Profile Image */}
           <div 
             ref={rightContentRef}
-            className="lg:col-span-5 xl:col-span-4 flex justify-center lg:justify-end opacity-0 transform translate-x-[50px] transition-all duration-1000 ease-out"
+            className="lg:col-span-6 xl:col-span-6 flex justify-center lg:justify-end opacity-0 transform translate-x-[50px] transition-all duration-1000 ease-out"
           >
             <div className="relative group">
               <img 
