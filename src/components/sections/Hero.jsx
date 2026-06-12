@@ -187,13 +187,13 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center animate-fade-in animation-delay-700">
               <Link
                 to="/projects"
-                className="bg-primary-green text-darkest-bg font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-glow active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-darkest-bg"
+                className="bg-primary-green text-darkest-bg font-semibold px-4 py-2 text-sm md:text-base md:px-6 md:py-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-glow active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-darkest-bg"
               >
                 View My Work
               </Link>
               <Link
                 to="/contact"
-                className="border-2 border-primary-green text-primary-green font-semibold px-6 py-3 rounded-lg hover:bg-primary-green hover:text-darkest-bg transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-darkest-bg"
+                className="border-2 border-primary-green text-primary-green font-semibold px-4 py-2 text-sm md:text-base md:px-6 md:py-3 rounded-lg hover:bg-primary-green hover:text-darkest-bg transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-darkest-bg"
               >
                 Get In Touch
               </Link>
@@ -209,10 +209,10 @@ const Hero = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`group relative p-3 rounded-lg border-2 border-light-grey/30 text-light-grey transition-all duration-300 hover:scale-110 hover:border-primary-green ${social.hoverColor} focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-darkest-bg`}
+                    className={`group relative p-2 md:p-3 rounded-lg border-2 border-light-grey/30 text-light-grey transition-all duration-300 hover:scale-110 hover:border-primary-green ${social.hoverColor} focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-darkest-bg`}
                     title={social.label}
                   >
-                    <IconComponent size={24} className="transition-colors duration-300 relative z-10" />
+                    <IconComponent className="w-5 h-5 md:w-6 md:h-6 transition-colors duration-300 relative z-10" />
                     
                     {/* Hover glow effect */}
                     <div className="absolute inset-0 rounded-lg bg-primary-green/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
