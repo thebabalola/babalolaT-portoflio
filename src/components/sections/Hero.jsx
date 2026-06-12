@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { Github, Linkedin, Mail, ChevronDown } from 'lucide-react';
+import { Github, Linkedin, Mail, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
@@ -245,12 +245,12 @@ const Hero = () => {
         </div>
       </div>
       
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
+      <div className="absolute right-8 bottom-8 md:right-16 md:bottom-16 animate-bounce-horizontal">
         <Link
           to="/about"
           className="text-light-grey hover:text-primary-green transition-colors duration-300 group focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-darkest-bg rounded-full p-2 block"
         >
-          <ChevronDown size={24} className="group-hover:scale-110 transition-transform duration-300" />
+          <ChevronRight size={32} className="group-hover:scale-110 transition-transform duration-300" />
         </Link>
       </div>
     </section>
