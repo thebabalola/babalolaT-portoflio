@@ -229,13 +229,6 @@ const Contact = () => {
               >
                 <FaDiscord className="w-6 h-6" />
               </a>
-              <a
-                href="mailto:t.babalolajoseph@gmail.com"
-                className="text-light-grey hover:text-primary-green transition-all hover:scale-110"
-                title="Email"
-              >
-                <Mail className="w-6 h-6" />
-              </a>
             </div>
           </div>
         </div>
