@@ -141,7 +141,7 @@ const Hero = () => {
     <section
       id="home"
       ref={sectionRef}
-      className="h-screen flex items-center justify-center relative overflow-hidden animate-on-scroll"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden animate-on-scroll pt-20 md:pt-0"
     >
       <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none" />
       {/* Background blur overlay - removed gradient to match skills section */}
