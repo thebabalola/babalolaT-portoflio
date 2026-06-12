@@ -105,15 +105,15 @@ const Contact = () => {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="mb-16 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-light-grey mb-4">Get In Touch</h2>
-          <p className="text-lg text-light-grey max-w-2xl mx-auto">Let's collaborate on your next project</p>
+          <h2 className="text-2xl md:text-4xl font-bold text-light-grey mb-4">Get In Touch</h2>
+          <p className="text-sm md:text-lg text-light-grey max-w-2xl mx-auto">Let's collaborate on your next project</p>
           <div className="w-20 h-1 bg-primary-green mx-auto mt-6 rounded-full"></div>
         </div>
         <div className="flex flex-col lg:grid lg:grid-cols-[1.4fr_1fr] gap-12 lg:gap-24 max-w-6xl mx-auto items-center lg:items-start">
-          <div className="bg-dark-accent/50 p-6 rounded-lg glass-effect w-[65%] lg:w-full max-w-lg lg:max-w-none">
+          <div className="bg-dark-accent/50 p-6 rounded-lg glass-effect w-full max-w-lg lg:max-w-none">
             <form onSubmit={onSubmit} className="space-y-5">
               <div>
-                <label htmlFor="name" className="block text-light-grey mb-2">Name</label>
+                <label htmlFor="name" className="block text-sm md:text-base text-light-grey mb-2">Name</label>
                 <input
                   type="text"
                   id="name"
@@ -121,12 +121,12 @@ const Contact = () => {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full p-2.5 bg-dark-accent/50 text-light-grey rounded-lg border border-medium-grey focus:ring-2 focus:ring-primary-green outline-none transition-all duration-300"
+                  className="w-full p-2.5 text-sm md:text-base bg-dark-accent/50 text-light-grey rounded-lg border border-medium-grey focus:ring-2 focus:ring-primary-green outline-none transition-all duration-300"
                   placeholder="Your Name"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-light-grey mb-2">Email</label>
+                <label htmlFor="email" className="block text-sm md:text-base text-light-grey mb-2">Email</label>
                 <input
                   type="email"
                   id="email"
@@ -134,12 +134,12 @@ const Contact = () => {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full p-2.5 bg-dark-accent/50 text-light-grey rounded-lg border border-medium-grey focus:ring-2 focus:ring-primary-green outline-none transition-all duration-300"
+                  className="w-full p-2.5 text-sm md:text-base bg-dark-accent/50 text-light-grey rounded-lg border border-medium-grey focus:ring-2 focus:ring-primary-green outline-none transition-all duration-300"
                   placeholder="Your Email"
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-light-grey mb-2">Message</label>
+                <label htmlFor="message" className="block text-sm md:text-base text-light-grey mb-2">Message</label>
                 <textarea
                   id="message"
                   name="message"
@@ -147,7 +147,7 @@ const Contact = () => {
                   rows="4"
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full p-2.5 bg-dark-accent/50 text-light-grey rounded-lg border border-medium-grey focus:ring-2 focus:ring-primary-green outline-none transition-all duration-300"
+                  className="w-full p-2.5 text-sm md:text-base bg-dark-accent/50 text-light-grey rounded-lg border border-medium-grey focus:ring-2 focus:ring-primary-green outline-none transition-all duration-300"
                   placeholder="Your Message"
                 ></textarea>
               </div>
@@ -155,7 +155,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="inline-flex items-center space-x-2 bg-primary-green text-darkest-bg font-semibold px-6 py-3 rounded-lg glow-effect hover:bg-primary-green/80 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
+                className="inline-flex items-center space-x-2 bg-primary-green text-darkest-bg font-semibold px-6 py-3 text-sm md:text-base rounded-lg glow-effect hover:bg-primary-green/80 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <>
@@ -186,17 +186,17 @@ const Contact = () => {
             </form>
           </div>
           <div className="space-y-6 text-center lg:text-left w-full lg:w-auto">
-            <h3 className="text-xl font-semibold text-light-grey">Contact Details</h3>
+            <h3 className="text-lg md:text-xl font-semibold text-light-grey">Contact Details</h3>
             <div className="space-y-4">
               <div className="flex items-center justify-center lg:justify-start space-x-3">
                 <Mail className="w-5 h-5 text-primary-green" />
-                <a href="mailto:t.babalolajoseph@gmail.com" className="text-light-grey hover:text-primary-green">
+                <a href="mailto:t.babalolajoseph@gmail.com" className="text-sm md:text-base text-light-grey hover:text-primary-green">
                   t.babalolajoseph@gmail.com
                 </a>
               </div>
               <div className="flex items-center justify-center lg:justify-start space-x-3">
                 <Phone className="w-5 h-5 text-primary-green" />
-                <a href="tel:+2348182599609" className="text-light-grey hover:text-primary-green">
+                <a href="tel:+2348182599609" className="text-sm md:text-base text-light-grey hover:text-primary-green">
                   +2348182599609
                 </a>
               </div>
