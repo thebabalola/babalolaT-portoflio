@@ -4,15 +4,16 @@ export default {
     "./index.html",
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        'darkest-bg': '#142C14',
-        'dark-accent': '#2D5128',
-        'medium-grey': '#677d54',
-        'light-grey': '#E4EB9C',
-        'deep-green': '#537B2F',
-        'primary-green': '#8DA750',
+        'darkest-bg': 'var(--darkest-bg)',
+        'dark-accent': 'var(--dark-accent)',
+        'medium-grey': 'var(--medium-grey)',
+        'light-grey': 'var(--light-grey)',
+        'deep-green': 'var(--deep-green)',
+        'primary-green': 'var(--primary-green)',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

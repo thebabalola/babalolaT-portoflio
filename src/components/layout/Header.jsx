@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Home, User, Zap, Rocket, Mail } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTheme } from '../../context/ThemeContext';
 
 const Header = () => {
   const headerRef = useRef(null);
@@ -8,6 +9,7 @@ const Header = () => {
   const mobileMenuRef = useRef(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { theme, toggleTheme } = useTheme();
 
   // Header behavior with enhanced animations
   useEffect(() => {
@@ -151,6 +153,19 @@ const Header = () => {
                   )}
                 </Link>
               ))}
+              
+              {/* Theme Toggle Button Desktop */}
+              <button
+                onClick={toggleTheme}
+                className="group relative ml-4 p-2 rounded-xl transition-all duration-300 text-light-grey hover:text-primary-green hover:bg-primary-green/10"
+                aria-label="Toggle Theme"
+              >
+                <img 
+                  src={theme === 'dark' ? '/sun-toggle.svg' : '/moon-toggle.svg'} 
+                  alt="Theme Toggle"
+                  className="w-5 h-5 transition-transform duration-500 hover:rotate-180" 
+                />
+              </button>
             </div>
 
             {/* Enhanced Mobile Menu Button */}
@@ -218,6 +233,32 @@ const Header = () => {
                   )}
                 </Link>
               ))}
+              
+              {/* Theme Toggle Button Mobile */}
+              <button
+                onClick={() => {
+                  toggleTheme();
+                  setTimeout(() => setIsMobileMenuOpen(false), 200);
+                }}
+                className="group relative w-full text-left px-4 py-3 rounded-xl transition-all duration-300 flex items-center justify-between text-light-grey hover:text-primary-green hover:bg-primary-green/10"
+                style={{
+                  animationDelay: `${navLinks.length * 0.1}s`,
+                  animation: isMobileMenuOpen ? 'slideInLeft 0.3s ease-out forwards' : ''
+                }}
+                aria-label="Toggle Theme"
+              >
+                <span className="font-medium flex items-center gap-3">
+                  <img 
+                    src={theme === 'dark' ? '/sun-toggle.svg' : '/moon-toggle.svg'} 
+                    alt="Theme Toggle"
+                    className="w-5 h-5 transition-transform duration-500 group-hover:rotate-180" 
+                  />
+                  {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
+                </span>
+                
+                {/* Hover effect */}
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary-green/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+              </button>
             </div>
           </div>
         </nav>
