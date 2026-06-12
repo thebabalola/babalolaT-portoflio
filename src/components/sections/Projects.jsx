@@ -104,7 +104,7 @@ const Projects = () => {
     <section
       id="projects"
       ref={sectionRef}
-      className="py-12 sm:py-16 lg:py-20 bg-darkest-bg/80 relative overflow-hidden animate-on-scroll"
+      className="py-12 sm:py-16 lg:py-20 relative overflow-hidden animate-on-scroll"
     >
       {/* Abstract Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
