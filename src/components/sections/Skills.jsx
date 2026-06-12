@@ -139,7 +139,7 @@ const Skills = () => {
                       <h3 className="text-xl md:text-2xl font-bold text-light-grey group-hover:text-primary-green transition-colors duration-300">
                         {category.title}
                       </h3>
-                      <div className="w-16 h-0.5 bg-primary-green/60 mt-1 group-hover:w-24 transition-all duration-300"></div>
+                      <div className="hidden md:block w-16 h-0.5 bg-primary-green/60 mt-1 group-hover:w-24 transition-all duration-300"></div>
                     </div>
                   </div>
                 </div>
