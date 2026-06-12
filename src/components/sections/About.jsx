@@ -34,9 +34,9 @@ const About = () => {
 
   return (
     <section id="about" ref={sectionRef} className="py-8 animate-on-scroll relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-20 sm:px-24 lg:px-28 relative">
+      <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-28 relative">
         <div className="mb-12 text-center">
-          <p className="text-xl text-light-grey max-w-2xl mx-auto animate-fade-in">
+          <p className="text-lg md:text-xl text-light-grey max-w-2xl mx-auto animate-fade-in">
             Get to know me better
           </p>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-green to-deep-green mx-auto mt-4 rounded-full animate-slide-up"></div>
@@ -49,13 +49,13 @@ const About = () => {
             className="lg:col-span-6 xl:col-span-6 space-y-6 opacity-0 transform translate-x-[-50px] transition-all duration-1000 ease-out"
           >
             <div className="space-y-4">
-              <p className="text-base text-light-grey leading-relaxed">
+              <p className="text-sm md:text-base text-light-grey leading-relaxed">
                 I'm a software engineer with a frontend background and a growing focus on backend systems, Rust, and protocol engineering. I started my tech journey in 2023 after transitioning from interior design and have since built web applications with React, Next.js, TypeScript, and JavaScript while exploring blockchain and distributed systems.
               </p>
-              <p className="text-base text-light-grey leading-relaxed">
+              <p className="text-sm md:text-base text-light-grey leading-relaxed">
                 Beyond personal projects, I've contributed to open-source projects including the Rust compiler, Servo browser engine, and the Rust Interop Initiative, where I've worked on bug fixes, debugging, and systems-level code. These experiences pushed me beyond building interfaces and sparked my interest in understanding how software works beneath the surface.
               </p>
-              <p className="text-base text-light-grey leading-relaxed">
+              <p className="text-sm md:text-base text-light-grey leading-relaxed">
                 Today, I'm focused on growing into systems and protocol engineering while continuing to contribute to open source and build software that solves real-world problems.
               </p>
             </div>

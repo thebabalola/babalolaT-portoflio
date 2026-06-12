@@ -34,13 +34,13 @@ const WhyHireMe = () => {
           className="w-full group focus:outline-none rounded-xl p-4 transition-all duration-300 hover:bg-dark-accent/30"
         >
           <div className="text-center flex flex-col items-center justify-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-light-grey mb-2 group-hover:text-primary-green transition-colors duration-300 flex items-center gap-3">
+            <h2 className="text-2xl md:text-4xl font-bold text-light-grey mb-2 group-hover:text-primary-green transition-colors duration-300 flex items-center gap-3">
               Why Hire Me
               <div className={`p-2 rounded-full bg-primary-green/10 transition-colors duration-300 group-hover:bg-primary-green/20 ${isOpen ? 'bg-primary-green/20' : ''}`}>
                 <ChevronDown className={`w-8 h-8 text-primary-green transform transition-transform duration-500 ${isOpen ? 'rotate-180' : ''}`} />
               </div>
             </h2>
-            <p className="text-lg text-light-grey max-w-2xl mx-auto mt-2">What makes me the right fit for your project</p>
+            <p className="text-sm md:text-lg text-light-grey max-w-2xl mx-auto mt-2">What makes me the right fit for your project</p>
             <div className={`h-1 bg-primary-green mx-auto mt-6 rounded-full transition-all duration-500 ${isOpen ? 'w-32 shadow-glow' : 'w-10 group-hover:w-20'}`}></div>
           </div>
         </button>
