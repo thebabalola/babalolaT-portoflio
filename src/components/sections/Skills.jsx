@@ -110,8 +110,8 @@ const Skills = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header Section */}
         <div className="mb-16 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-light-grey mb-4">My Skills</h2>
-          <p className="text-lg text-light-grey max-w-2xl mx-auto">Technologies and tools I excel in to build innovative solutions</p>
+          <h2 className="text-2xl md:text-4xl font-bold text-light-grey mb-4">My Skills</h2>
+          <p className="text-sm md:text-lg text-light-grey max-w-2xl mx-auto">Technologies and tools I excel in to build innovative solutions</p>
           <div className="w-20 h-1 bg-primary-green mx-auto mt-6 rounded-full"></div>
         </div>
 
@@ -132,11 +132,11 @@ const Skills = () => {
                 {/* Category Header */}
                 <div className="flex items-center mb-8">
                   <div className="flex items-center space-x-4">
-                    <div className="p-3 bg-primary-green/20 border border-primary-green/30 rounded-xl group-hover:bg-primary-green/30 group-hover:border-primary-green/50 transition-all duration-300">
-                      <IconComponent className="w-6 h-6 text-primary-green" />
+                    <div className="p-2 md:p-3 bg-primary-green/20 border border-primary-green/30 rounded-xl group-hover:bg-primary-green/30 group-hover:border-primary-green/50 transition-all duration-300">
+                      <IconComponent className="w-5 h-5 md:w-6 md:h-6 text-primary-green" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-light-grey group-hover:text-primary-green transition-colors duration-300">
+                      <h3 className="text-xl md:text-2xl font-bold text-light-grey group-hover:text-primary-green transition-colors duration-300">
                         {category.title}
                       </h3>
                       <div className="w-16 h-0.5 bg-primary-green/60 mt-1 group-hover:w-24 transition-all duration-300"></div>
@@ -145,7 +145,7 @@ const Skills = () => {
                 </div>
 
                 {/* Skills Flex Layout */}
-                <div className="flex flex-wrap gap-10 px-10">
+                <div className="flex flex-wrap gap-6 md:gap-10 px-4 md:px-10">
                   {category.skills.map((skill, index) => {
                     const SkillIcon = skill.icon;
                     return (
@@ -159,10 +159,10 @@ const Skills = () => {
                           transitionDelay: `${index * 100}ms`
                         }}
                       >
-                        <div className="p-3 border border-primary-green/40 rounded-full group-hover/item:bg-primary-green group-hover/item:border-primary-green transition-all duration-300">
-                          <SkillIcon className="w-8 h-8 text-primary-green group-hover/item:text-darkest-bg" />
+                        <div className="p-2 md:p-3 border border-primary-green/40 rounded-full group-hover/item:bg-primary-green group-hover/item:border-primary-green transition-all duration-300">
+                          <SkillIcon className="w-5 h-5 md:w-8 md:h-8 text-primary-green group-hover/item:text-darkest-bg" />
                         </div>
-                        <span className="text-light-grey group-hover/item:text-primary-green font-medium text-xs text-center transition-colors duration-300">
+                        <span className="text-light-grey group-hover/item:text-primary-green font-medium text-[10px] md:text-xs text-center transition-colors duration-300">
                           {skill.name}
                         </span>
                       </div>
