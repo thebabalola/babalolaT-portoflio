@@ -1,9 +1,20 @@
-import { useEffect, useRef } from 'react';
-import { Mail, Phone, MapPin, Github, Linkedin, Send } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
+import { Mail, Phone, Github, Linkedin, Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+import { FaXTwitter } from 'react-icons/fa6';
 
 const Contact = () => {
   const sectionRef = useRef(null);
-  const formRef = useRef(null);
+  
+  // Form State
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  
+  // Submission States
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success' | 'error' | null
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -19,40 +30,51 @@ const Contact = () => {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    const form = formRef.current;
-    if (!form) return;
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
 
-    const inputs = form.querySelectorAll('input, textarea');
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    
+    // Replace with actual Web3Forms Access Key or import from .env
+    const accessKey = import.meta.env.VITE_WEB3FORMS_KEY || "YOUR_ACCESS_KEY_HERE";
+    
+    const dataToSubmit = new FormData();
+    dataToSubmit.append("access_key", accessKey);
+    dataToSubmit.append("name", formData.name);
+    dataToSubmit.append("email", formData.email);
+    dataToSubmit.append("message", formData.message);
 
-    const validateInput = (input) => {
-      const isValid = input.checkValidity();
-      const parent = input.parentElement;
-      parent.classList.remove('input-valid', 'input-invalid');
-      if (input.value.trim()) {
-        parent.classList.add(isValid ? 'input-valid' : 'input-invalid');
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: dataToSubmit
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+        setTimeout(() => setSubmitStatus(null), 5000); // Clear success message after 5s
+      } else {
+        setSubmitStatus('error');
+        console.error("Web3Forms Error:", data);
       }
-    };
-
-    inputs.forEach((input) => {
-      input.addEventListener('focus', () => {
-        input.parentElement.classList.add('input-focused');
-      });
-      input.addEventListener('blur', () => {
-        input.parentElement.classList.remove('input-focused');
-        validateInput(input);
-      });
-      input.addEventListener('input', () => validateInput(input));
-    });
-
-    return () => {
-      inputs.forEach((input) => {
-        input.removeEventListener('focus', () => {});
-        input.removeEventListener('blur', () => {});
-        input.removeEventListener('input', () => {});
-      });
-    };
-  }, []);
+    } catch (error) {
+      setSubmitStatus('error');
+      console.error("Fetch Error:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section id="contact" ref={sectionRef} className="py-10 animate-on-scroll relative overflow-hidden">
@@ -89,13 +111,17 @@ const Contact = () => {
         </div>
         <div className="flex flex-col lg:grid lg:grid-cols-[1.4fr_1fr] gap-12 lg:gap-24 max-w-6xl mx-auto items-center lg:items-start">
           <div className="bg-dark-accent/50 p-6 rounded-lg glass-effect w-[65%] lg:w-full max-w-lg lg:max-w-none">
-            <form ref={formRef} className="space-y-5">
+            <form onSubmit={onSubmit} className="space-y-5">
               <div>
                 <label htmlFor="name" className="block text-light-grey mb-2">Name</label>
                 <input
                   type="text"
                   id="name"
-                  className="w-full p-2.5 bg-dark-accent/50 text-light-grey rounded-lg border border-medium-grey focus:ring-2 focus:ring-primary-green"
+                  name="name"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full p-2.5 bg-dark-accent/50 text-light-grey rounded-lg border border-medium-grey focus:ring-2 focus:ring-primary-green outline-none transition-all duration-300"
                   placeholder="Your Name"
                 />
               </div>
@@ -104,7 +130,11 @@ const Contact = () => {
                 <input
                   type="email"
                   id="email"
-                  className="w-full p-2.5 bg-dark-accent/50 text-light-grey rounded-lg border border-medium-grey focus:ring-2 focus:ring-primary-green"
+                  name="email"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full p-2.5 bg-dark-accent/50 text-light-grey rounded-lg border border-medium-grey focus:ring-2 focus:ring-primary-green outline-none transition-all duration-300"
                   placeholder="Your Email"
                 />
               </div>
@@ -112,18 +142,47 @@ const Contact = () => {
                 <label htmlFor="message" className="block text-light-grey mb-2">Message</label>
                 <textarea
                   id="message"
+                  name="message"
+                  required
                   rows="4"
-                  className="w-full p-2.5 bg-dark-accent/50 text-light-grey rounded-lg border border-medium-grey focus:ring-2 focus:ring-primary-green"
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="w-full p-2.5 bg-dark-accent/50 text-light-grey rounded-lg border border-medium-grey focus:ring-2 focus:ring-primary-green outline-none transition-all duration-300"
                   placeholder="Your Message"
                 ></textarea>
               </div>
-              <a
-                href="#"
-                className="inline-flex items-center space-x-2 bg-primary-green text-darkest-bg font-semibold px-6 py-3 rounded-lg glow-effect hover:bg-primary-green/80"
+              
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="inline-flex items-center space-x-2 bg-primary-green text-darkest-bg font-semibold px-6 py-3 rounded-lg glow-effect hover:bg-primary-green/80 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                <Send className="w-4 h-4" />
-                <span>Send Message</span>
-              </a>
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    <span>Sending...</span>
+                  </>
+                ) : (
+                  <>
+                    <Send className="w-4 h-4" />
+                    <span>Send Message</span>
+                  </>
+                )}
+              </button>
+
+              {/* Status Messages */}
+              {submitStatus === 'success' && (
+                <div className="flex items-center text-primary-green bg-primary-green/10 p-3 rounded-lg">
+                  <CheckCircle2 className="w-5 h-5 mr-2" />
+                  <span>Message sent successfully! I'll get back to you soon.</span>
+                </div>
+              )}
+              {submitStatus === 'error' && (
+                <div className="flex items-center text-red-400 bg-red-400/10 p-3 rounded-lg">
+                  <AlertCircle className="w-5 h-5 mr-2" />
+                  <span>Failed to send message. Please try again or email me directly.</span>
+                </div>
+              )}
             </form>
           </div>
           <div className="space-y-6 text-center lg:text-left w-full lg:w-auto">
@@ -137,13 +196,9 @@ const Contact = () => {
               </div>
               <div className="flex items-center justify-center lg:justify-start space-x-3">
                 <Phone className="w-5 h-5 text-primary-green" />
-                <a href="tel:+2348121223631" className="text-light-grey hover:text-primary-green">
-                  +2348121223631
+                <a href="tel:+2348182599609" className="text-light-grey hover:text-primary-green">
+                  +2348182599609
                 </a>
-              </div>
-              <div className="flex items-center justify-center lg:justify-start space-x-3">
-                <MapPin className="w-5 h-5 text-primary-green" />
-                <span className="text-light-grey">Lagos, Nigeria</span>
               </div>
             </div>
             <div className="flex space-x-6 pt-4 justify-center lg:justify-start">
@@ -166,6 +221,15 @@ const Contact = () => {
                 <Linkedin className="w-6 h-6" />
               </a>
               <a
+                href="https://x.com/thebabalolajoe"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-light-grey hover:text-primary-green transition-all hover:scale-110"
+                title="X (Twitter)"
+              >
+                <FaXTwitter className="w-6 h-6" />
+              </a>
+              <a
                 href="mailto:t.babalolajoseph@gmail.com"
                 className="text-light-grey hover:text-primary-green transition-all hover:scale-110"
                 title="Email"
@@ -176,7 +240,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-
 
     </section>
   );
