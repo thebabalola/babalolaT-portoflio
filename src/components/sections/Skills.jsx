@@ -51,20 +51,17 @@ const Skills = () => {
         { name: 'Next.js', icon: SiNextdotjs },
         { name: 'JavaScript', icon: SiJavascript },
         { name: 'TypeScript', icon: SiTypescript },
-        { name: 'Tailwind CSS', icon: SiTailwindcss },
-        { name: 'HTML5', icon: SiHtml5 },
-        { name: 'CSS3', icon: SiCss3 },
-        { name: 'Vite', icon: SiVite }
+        { name: 'Tailwind CSS', icon: SiTailwindcss }
       ]
     },
     {
       title: 'Blockchain Technologies',
       icon: Database,
       skills: [
+        { name: 'Rust', icon: SiRust },
         { name: 'Solidity', icon: SiSolidity },
         { name: 'Foundry', icon: Hammer },
         { name: 'Hardhat', icon: HardHat },
-        // { name: 'Rust', icon: SiRust },
         { name: 'Subgraph', icon: SiGraphql },
         { name: 'Wagmi', icon: SiEthereum  },
         { name: 'AppKit', icon: Package }
@@ -167,7 +164,7 @@ const Skills = () => {
                         }}
                       >
                         <div className="p-3 border border-primary-green/40 rounded-full group-hover/item:bg-primary-green group-hover/item:border-primary-green transition-all duration-300">
-                          <SkillIcon className="w-10 h-10 text-primary-green group-hover/item:text-darkest-bg" />
+                          <SkillIcon className="w-8 h-8 text-primary-green group-hover/item:text-darkest-bg" />
                         </div>
                         <span className="text-light-grey group-hover/item:text-primary-green font-medium text-xs text-center transition-colors duration-300">
                           {skill.name}
