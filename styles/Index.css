@@ -206,17 +206,7 @@ input:focus, select:focus, textarea:focus {
   position: relative;
 }
 
-.dark #home::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(141, 167, 80, 0.05) 0%, transparent 50%);
-  pointer-events: none;
-}
+
 
 /* Enhanced Button Styles */
 button {
