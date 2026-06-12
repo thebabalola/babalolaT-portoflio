@@ -55,7 +55,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <section id="contact" ref={sectionRef} className="py-20 animate-on-scroll relative overflow-hidden">
+    <section id="contact" ref={sectionRef} className="py-10 animate-on-scroll relative overflow-hidden">
       {/* Tech Background Pattern */}
       <div className="absolute inset-0 opacity-5 pointer-events-none">
 

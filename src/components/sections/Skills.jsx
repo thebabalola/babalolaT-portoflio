@@ -83,7 +83,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" ref={sectionRef} className="py-20 relative overflow-hidden animate-on-scroll">
+    <section id="skills" ref={sectionRef} className="py-10 relative overflow-hidden animate-on-scroll">
       {/* Abstract Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Animated Lines */}

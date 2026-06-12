@@ -24,7 +24,7 @@ const WhyHireMe = () => {
     <section
       id="why-hire-me"
       ref={sectionRef}
-      className="py-12 bg-dark-accent/10 animate-on-scroll border-t border-primary-green/10"
+      className="py-6 bg-dark-accent/10 animate-on-scroll border-t border-primary-green/10"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         

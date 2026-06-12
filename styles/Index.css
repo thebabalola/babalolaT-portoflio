@@ -14,24 +14,36 @@
 :root {
   --mouse-x: 0px;
   --mouse-y: 0px;
-  
+
   /* Light Mode Palette - space-separated for Tailwind alpha support */
-  --darkest-bg: 228 235 156;    /* #E4EB9C Mindaro */
-  --dark-accent: 141 167 80;    /* #8DA750 Asparagus */
-  --medium-grey: 83 123 47;     /* #537B2F Fern Green */
-  --deep-green: 83 123 47;      /* #537B2F Fern Green */
-  --primary-green: 45 81 40;    /* #2D5128 Cal Poly Green */
-  --light-grey: 20 44 20;       /* #142C14 Dark Green */
+  --darkest-bg: 228 235 156;
+  /* #E4EB9C Mindaro */
+  --dark-accent: 141 167 80;
+  /* #8DA750 Asparagus */
+  --medium-grey: 83 123 47;
+  /* #537B2F Fern Green */
+  --deep-green: 83 123 47;
+  /* #537B2F Fern Green */
+  --primary-green: 45 81 40;
+  /* #2D5128 Cal Poly Green */
+  --light-grey: 20 44 20;
+  /* #142C14 Dark Green */
 }
 
 .dark {
   /* Dark Mode Palette - space-separated for Tailwind alpha support */
-  --darkest-bg: 20 44 20;       /* #142C14 */
-  --dark-accent: 45 81 40;      /* #2D5128 */
-  --medium-grey: 83 123 47;     /* #537B2F */
-  --deep-green: 83 123 47;      /* #537B2F */
-  --primary-green: 141 167 80;  /* #8DA750 */
-  --light-grey: 228 235 156;    /* #E4EB9C */
+  --darkest-bg: 20 44 20;
+  /* #142C14 */
+  --dark-accent: 45 81 40;
+  /* #2D5128 */
+  --medium-grey: 83 123 47;
+  /* #537B2F */
+  --deep-green: 83 123 47;
+  /* #537B2F */
+  --primary-green: 141 167 80;
+  /* #8DA750 */
+  --light-grey: 228 235 156;
+  /* #E4EB9C */
 }
 
 html {
@@ -69,12 +81,10 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    45deg,
-    transparent 30%,
-    rgba(var(--primary-green-rgb), 0.1) 50%,
-    transparent 70%
-  );
+  background: linear-gradient(45deg,
+      transparent 30%,
+      rgba(var(--primary-green-rgb), 0.1) 50%,
+      transparent 70%);
   transform: translateX(-100%);
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -89,7 +99,8 @@ body {
 }
 
 /* Enhanced Smooth Transitions */
-a, button {
+a,
+button {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -114,7 +125,9 @@ a, button {
 }
 
 /* Enhanced Focus States */
-input:focus, select:focus, textarea:focus {
+input:focus,
+select:focus,
+textarea:focus {
   box-shadow: 0 0 0 3px rgba(141, 167, 80, 0.3);
   outline: none;
   border-color: var(--primary-green);
@@ -141,6 +154,7 @@ input:focus, select:focus, textarea:focus {
     opacity: 0;
     transform: translateY(30px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -158,9 +172,12 @@ input:focus, select:focus, textarea:focus {
 }
 
 @keyframes gradientShift {
-  0%, 100% {
+
+  0%,
+  100% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
@@ -183,11 +200,9 @@ input:focus, select:focus, textarea:focus {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(
-    circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    rgba(141, 167, 80, 0.1) 0%,
-    transparent 50%
-  );
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(141, 167, 80, 0.1) 0%,
+      transparent 50%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -206,7 +221,17 @@ input:focus, select:focus, textarea:focus {
   position: relative;
 }
 
-
+.dark #home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(141, 167, 80, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
 
 /* Enhanced Button Styles */
 button {
@@ -236,11 +261,13 @@ header {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-header nav a, header nav button {
+header nav a,
+header nav button {
   position: relative;
 }
 
-header nav a::after, header nav button::after {
+header nav a::after,
+header nav button::after {
   content: '';
   position: absolute;
   bottom: -4px;
@@ -251,7 +278,8 @@ header nav a::after, header nav button::after {
   transition: width 0.3s ease;
 }
 
-header nav a:hover::after, header nav button:hover::after {
+header nav a:hover::after,
+header nav button:hover::after {
   width: 100%;
 }
 
@@ -294,6 +322,7 @@ header nav a:hover::after, header nav button:hover::after {
   0% {
     transform: scaleX(0);
   }
+
   100% {
     transform: scaleX(1);
   }
@@ -331,10 +360,13 @@ header nav a:hover::after, header nav button:hover::after {
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(-50%) scale(1);
     opacity: 1;
   }
+
   50% {
     transform: translateY(-50%) scale(1.2);
     opacity: 0.8;
@@ -355,13 +387,25 @@ header nav a:hover::after, header nav button:hover::after {
 }
 
 @keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: #8DA750; }
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: #8DA750;
+  }
 }
 
 /* Enhanced Shadow Effects */
@@ -387,12 +431,19 @@ header nav a:hover::after, header nav button:hover::after {
 }
 
 @keyframes bounceSlow {
-  0%, 20%, 50%, 80%, 100% {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0) translateX(-50%);
   }
+
   40% {
     transform: translateY(-10px) translateX(-50%);
   }
+
   60% {
     transform: translateY(-5px) translateX(-50%);
   }
@@ -403,14 +454,15 @@ header nav a:hover::after, header nav button:hover::after {
   .project-card {
     margin-bottom: 2rem;
   }
-  
+
   .glass-effect {
     backdrop-filter: blur(10px);
   }
 }
 
 /* High DPI Display Optimizations */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
   .gradient-text {
     -webkit-text-stroke: 0.5px transparent;
   }
@@ -425,6 +477,7 @@ header nav a:hover::after, header nav button:hover::after {
 
 /* Print Styles */
 @media print {
+
   .animate-on-scroll,
   .glow-effect,
   .glass-effect {
@@ -432,7 +485,7 @@ header nav a:hover::after, header nav button:hover::after {
     transform: none;
     opacity: 1;
   }
-  
+
   body {
     background: white;
     color: black;

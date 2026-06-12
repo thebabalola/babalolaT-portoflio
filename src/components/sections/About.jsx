@@ -33,7 +33,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" ref={sectionRef} className="py-16 animate-on-scroll relative overflow-hidden">
+    <section id="about" ref={sectionRef} className="py-8 animate-on-scroll relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-20 sm:px-24 lg:px-28 relative">
         <div className="mb-12 text-center">
           <p className="text-xl text-light-grey max-w-2xl mx-auto animate-fade-in">
