@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Home, User, Zap, Rocket, Mail } from 'lucide-react';
+import { Home, User, Zap, Rocket, Mail, Sun, Moon } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../../context/ThemeContext';
 
@@ -160,11 +160,11 @@ const Header = () => {
                 className="group relative ml-4 p-2 rounded-xl transition-all duration-300 text-light-grey hover:text-primary-green hover:bg-primary-green/10"
                 aria-label="Toggle Theme"
               >
-                <img 
-                  src={theme === 'dark' ? '/sun-toggle.svg' : '/moon-toggle.svg'} 
-                  alt="Theme Toggle"
-                  className="w-5 h-5 transition-transform duration-500 hover:rotate-180" 
-                />
+                {theme === 'dark' ? (
+                  <Sun className="w-5 h-5 transition-transform duration-500 group-hover:rotate-180" />
+                ) : (
+                  <Moon className="w-5 h-5 transition-transform duration-500 group-hover:rotate-180" />
+                )}
               </button>
             </div>
 
@@ -248,11 +248,11 @@ const Header = () => {
                 aria-label="Toggle Theme"
               >
                 <span className="font-medium flex items-center gap-3">
-                  <img 
-                    src={theme === 'dark' ? '/sun-toggle.svg' : '/moon-toggle.svg'} 
-                    alt="Theme Toggle"
-                    className="w-5 h-5 transition-transform duration-500 group-hover:rotate-180" 
-                  />
+                  {theme === 'dark' ? (
+                    <Sun className="w-5 h-5 transition-transform duration-500 group-hover:rotate-180" />
+                  ) : (
+                    <Moon className="w-5 h-5 transition-transform duration-500 group-hover:rotate-180" />
+                  )}
                   {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
                 </span>
                 
