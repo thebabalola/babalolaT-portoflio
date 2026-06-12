@@ -8,12 +8,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        'darkest-bg': 'var(--darkest-bg)',
-        'dark-accent': 'var(--dark-accent)',
-        'medium-grey': 'var(--medium-grey)',
-        'light-grey': 'var(--light-grey)',
-        'deep-green': 'var(--deep-green)',
-        'primary-green': 'var(--primary-green)',
+        'darkest-bg': 'rgb(var(--darkest-bg) / <alpha-value>)',
+        'dark-accent': 'rgb(var(--dark-accent) / <alpha-value>)',
+        'medium-grey': 'rgb(var(--medium-grey) / <alpha-value>)',
+        'light-grey': 'rgb(var(--light-grey) / <alpha-value>)',
+        'deep-green': 'rgb(var(--deep-green) / <alpha-value>)',
+        'primary-green': 'rgb(var(--primary-green) / <alpha-value>)',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

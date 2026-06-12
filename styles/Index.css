@@ -15,24 +15,24 @@
   --mouse-x: 0px;
   --mouse-y: 0px;
   
-  /* Light Mode Palette */
-  --darkest-bg: #F4F8F1;
-  --dark-accent: #D1E2C4;
-  --medium-grey: #677d54;
-  --light-grey: #142C14;
-  --deep-green: #537B2F;
-  --primary-green: #8DA750;
-  --primary-green-rgb: 141, 167, 80;
+  /* Light Mode Palette (Inverted RGB) */
+  --darkest-bg: 228, 235, 156;    /* #E4EB9C Mindaro */
+  --dark-accent: 141, 167, 80;    /* #8DA750 Asparagus */
+  --medium-grey: 83, 123, 47;     /* #537B2F Fern Green */
+  --deep-green: 83, 123, 47;      /* #537B2F Fern Green */
+  --primary-green: 45, 81, 40;    /* #2D5128 Cal Poly Green */
+  --light-grey: 20, 44, 20;       /* #142C14 Dark Green */
+  --primary-green-rgb: 45, 81, 40;
 }
 
 .dark {
-  /* Dark Mode Palette */
-  --darkest-bg: #142C14;
-  --dark-accent: #2D5128;
-  --medium-grey: #677d54;
-  --light-grey: #E4EB9C;
-  --deep-green: #537B2F;
-  --primary-green: #8DA750;
+  /* Dark Mode Palette (Original RGB) */
+  --darkest-bg: 20, 44, 20;       /* #142C14 */
+  --dark-accent: 45, 81, 40;      /* #2D5128 */
+  --medium-grey: 83, 123, 47;     /* #537B2F */
+  --deep-green: 83, 123, 47;      /* #537B2F */
+  --primary-green: 141, 167, 80;  /* #8DA750 */
+  --light-grey: 228, 235, 156;    /* #E4EB9C */
   --primary-green-rgb: 141, 167, 80;
 }
 
