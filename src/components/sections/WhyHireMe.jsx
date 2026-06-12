@@ -65,8 +65,8 @@ const WhyHireMe = () => {
                 <div className="text-4xl mb-4 flex justify-center">
                   <Zap className="w-10 h-10 text-primary-green group-hover:text-deep-green transition-colors duration-300" />
                 </div>
-                <h3 className="text-xl font-semibold text-light-grey mb-2 group-hover:text-primary-green transition-colors duration-300">Eager Learner</h3>
-                <p className="text-light-grey group-hover:text-primary-green/90 transition-colors duration-300">Passionate about embracing new challenges to deliver innovative solutions.</p>
+                <h3 className="text-lg md:text-xl font-semibold text-light-grey mb-2 group-hover:text-primary-green transition-colors duration-300">Eager Learner</h3>
+                <p className="text-sm md:text-base text-light-grey group-hover:text-primary-green/90 transition-colors duration-300">Passionate about embracing new challenges to deliver innovative solutions.</p>
               </div>
             </div>
 
@@ -78,8 +78,8 @@ const WhyHireMe = () => {
                 <div className="text-4xl mb-4 flex justify-center">
                   <Code className="w-10 h-10 text-primary-green group-hover:text-deep-green transition-colors duration-300" />
                 </div>
-                <h3 className="text-xl font-semibold text-light-grey mb-2 group-hover:text-primary-green transition-colors duration-300">Project Builder</h3>
-                <p className="text-light-grey group-hover:text-primary-green/90 transition-colors duration-300">Consistently deliver clean, user-focused solutions through hands-on development.</p>
+                <h3 className="text-lg md:text-xl font-semibold text-light-grey mb-2 group-hover:text-primary-green transition-colors duration-300">Project Builder</h3>
+                <p className="text-sm md:text-base text-light-grey group-hover:text-primary-green/90 transition-colors duration-300">Consistently deliver clean, user-focused solutions through hands-on development.</p>
               </div>
             </div>
 
@@ -91,8 +91,8 @@ const WhyHireMe = () => {
                 <div className="text-4xl mb-4 flex justify-center">
                   <Users className="w-10 h-10 text-primary-green group-hover:text-deep-green transition-colors duration-300" />
                 </div>
-                <h3 className="text-xl font-semibold text-light-grey mb-2 group-hover:text-primary-green transition-colors duration-300">Team Player</h3>
-                <p className="text-light-grey group-hover:text-primary-green/90 transition-colors duration-300">Thrive in collaborative settings, contributing ideas to achieve shared goals.</p>
+                <h3 className="text-lg md:text-xl font-semibold text-light-grey mb-2 group-hover:text-primary-green transition-colors duration-300">Team Player</h3>
+                <p className="text-sm md:text-base text-light-grey group-hover:text-primary-green/90 transition-colors duration-300">Thrive in collaborative settings, contributing ideas to achieve shared goals.</p>
               </div>
             </div>
 
@@ -104,8 +104,8 @@ const WhyHireMe = () => {
                 <div className="text-4xl mb-4 flex justify-center">
                   <Puzzle className="w-10 h-10 text-primary-green group-hover:text-deep-green transition-colors duration-300" />
                 </div>
-                <h3 className="text-xl font-semibold text-light-grey mb-2 group-hover:text-primary-green transition-colors duration-300">Problem Solver</h3>
-                <p className="text-light-grey group-hover:text-primary-green/90 transition-colors duration-300">Driven to create innovative solutions for real-world challenges.</p>
+                <h3 className="text-lg md:text-xl font-semibold text-light-grey mb-2 group-hover:text-primary-green transition-colors duration-300">Problem Solver</h3>
+                <p className="text-sm md:text-base text-light-grey group-hover:text-primary-green/90 transition-colors duration-300">Driven to create innovative solutions for real-world challenges.</p>
               </div>
             </div>
 

@@ -86,7 +86,7 @@ const About = () => {
           {/* Right Content - Profile Image */}
           <div 
             ref={rightContentRef}
-            className="lg:col-span-6 xl:col-span-6 flex justify-center lg:justify-end opacity-0 transform translate-x-[50px] transition-all duration-1000 ease-out"
+            className="hidden lg:flex lg:col-span-6 xl:col-span-6 justify-center lg:justify-end opacity-0 transform translate-x-[50px] transition-all duration-1000 ease-out"
           >
             <div className="relative group">
               <img 
