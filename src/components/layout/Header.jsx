@@ -7,7 +7,6 @@ const Header = () => {
   const headerRef = useRef(null);
   const location = useLocation();
   const { theme, toggleTheme } = useTheme();
-  const [activeLabel, setActiveLabel] = useState(null);
 
   // Header scroll behavior
   useEffect(() => {
@@ -161,33 +160,29 @@ const Header = () => {
             <Link
               key={link.name}
               to={link.href}
-              className="relative flex flex-col items-center justify-center flex-1 h-full group"
-              onMouseEnter={() => setActiveLabel(link.name)}
-              onMouseLeave={() => setActiveLabel(null)}
-              onClick={() => setActiveLabel(null)}
+              className="relative flex flex-col items-center justify-center flex-1 h-full gap-0.5 group"
             >
-              {/* Label tooltip above icon */}
-              <span
-                className={`absolute -top-8 left-1/2 -translate-x-1/2 text-xs font-semibold px-2 py-0.5 rounded-md bg-dark-accent border border-primary-green/30 text-primary-green whitespace-nowrap transition-all duration-200 pointer-events-none ${
-                  activeLabel === link.name ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1'
-                }`}
-              >
-                {link.name}
-              </span>
-
               {/* Icon */}
               <link.icon
-                size={22}
+                size={20}
                 className={`transition-all duration-300 ${
                   isActive
                     ? 'text-primary-green scale-110'
                     : 'text-light-grey group-hover:text-primary-green group-hover:scale-110'
                 }`}
               />
+              {/* Always-visible label */}
+              <span
+                className={`text-[10px] font-medium transition-colors duration-300 ${
+                  isActive ? 'text-primary-green' : 'text-light-grey group-hover:text-primary-green'
+                }`}
+              >
+                {link.name}
+              </span>
 
               {/* Active dot */}
               {isActive && (
-                <span className="mt-1 w-1 h-1 rounded-full bg-primary-green animate-pulse"></span>
+                <span className="absolute top-1 w-1 h-1 rounded-full bg-primary-green animate-pulse"></span>
               )}
             </Link>
           );
