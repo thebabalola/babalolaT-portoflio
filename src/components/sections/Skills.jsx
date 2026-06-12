@@ -69,7 +69,7 @@ const Skills = () => {
       title: 'Tools & Frameworks',
       icon: Wrench,
       skills: [
-        { name: 'GitHub Accounts', icon: SiGithub },
+        { name: 'GitHub Actions', icon: SiGithub },
         { name: 'Chrome DevTools', icon: SiGooglechrome }
       ]
     }
