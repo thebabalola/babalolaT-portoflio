@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Mail, Phone, Github, Linkedin, Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
-import { FaXTwitter } from 'react-icons/fa6';
+import { FaDiscord } from 'react-icons/fa6';
 
 const Contact = () => {
   const sectionRef = useRef(null);
@@ -221,13 +221,13 @@ const Contact = () => {
                 <Linkedin className="w-6 h-6" />
               </a>
               <a
-                href="https://x.com/thebabalolajoe"
+                href="https://discord.com/users/thebabalolajoe"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-light-grey hover:text-primary-green transition-all hover:scale-110"
-                title="X (Twitter)"
+                title="Discord"
               >
-                <FaXTwitter className="w-6 h-6" />
+                <FaDiscord className="w-6 h-6" />
               </a>
               <a
                 href="mailto:t.babalolajoseph@gmail.com"
