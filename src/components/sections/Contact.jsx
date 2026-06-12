@@ -221,7 +221,7 @@ const Contact = () => {
                 <Linkedin className="w-6 h-6" />
               </a>
               <a
-                href="https://discord.com/users/thebabalolajoe"
+                href="https://discordapp.com/users/thereborns"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-light-grey hover:text-primary-green transition-all hover:scale-110"
